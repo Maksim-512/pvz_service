@@ -25,7 +25,7 @@ cd pvz-service
 ### Сборка и запуск с использованием Docker:
 
 ```bash
-docker-compose up --build
+docker-compose up --build -d
 ```
 
 ### Проект будет доступен по следующим адресам:
