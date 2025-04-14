@@ -1,0 +1,27 @@
+http:
+  port: 8080
+  read_timeout: 5s
+  write_timeout: 10s
+
+grpc:
+  port: 3000
+
+prometheus:
+  port: 9000
+
+database:
+  host: localhost
+  port: 5432
+  username: postgres
+  user: postgres
+  password: "0512"
+  name: pvz_service
+  max_open_conns: 10
+  max_idle_conns: 5
+  conn_max_lifetime: 30
+
+auth:
+  secret_key: "Очень секретный ключ"
+
+logging:
+  env: "local"

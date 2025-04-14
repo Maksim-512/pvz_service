@@ -1,0 +1,3622 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>grpc: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">pvz_service/cmd/pvz_service/grpc/main.go (0.0%)</option>
+				
+				<option value="file1">pvz_service/cmd/pvz_service/http/main.go (0.0%)</option>
+				
+				<option value="file2">pvz_service/internal/app/auth/handler.go (100.0%)</option>
+				
+				<option value="file3">pvz_service/internal/app/auth/mocks/repository_mock.go (100.0%)</option>
+				
+				<option value="file4">pvz_service/internal/app/auth/mocks/service_mock.go (100.0%)</option>
+				
+				<option value="file5">pvz_service/internal/app/auth/repository.go (100.0%)</option>
+				
+				<option value="file6">pvz_service/internal/app/auth/service.go (100.0%)</option>
+				
+				<option value="file7">pvz_service/internal/app/product/handler.go (100.0%)</option>
+				
+				<option value="file8">pvz_service/internal/app/product/mocks/repository_mock.go (100.0%)</option>
+				
+				<option value="file9">pvz_service/internal/app/product/mocks/service_mock.go (100.0%)</option>
+				
+				<option value="file10">pvz_service/internal/app/product/repository.go (100.0%)</option>
+				
+				<option value="file11">pvz_service/internal/app/product/service.go (100.0%)</option>
+				
+				<option value="file12">pvz_service/internal/app/pvz/handler.go (100.0%)</option>
+				
+				<option value="file13">pvz_service/internal/app/pvz/mocks/repository_mock.go (100.0%)</option>
+				
+				<option value="file14">pvz_service/internal/app/pvz/mocks/service_mock.go (100.0%)</option>
+				
+				<option value="file15">pvz_service/internal/app/pvz/repository.go (96.1%)</option>
+				
+				<option value="file16">pvz_service/internal/app/pvz/service.go (100.0%)</option>
+				
+				<option value="file17">pvz_service/internal/app/reception/handler.go (100.0%)</option>
+				
+				<option value="file18">pvz_service/internal/app/reception/mocks/repository_mock.go (100.0%)</option>
+				
+				<option value="file19">pvz_service/internal/app/reception/mocks/service_mock.go (100.0%)</option>
+				
+				<option value="file20">pvz_service/internal/app/reception/repository.go (100.0%)</option>
+				
+				<option value="file21">pvz_service/internal/app/reception/service.go (100.0%)</option>
+				
+				<option value="file22">pvz_service/internal/config/config.go (80.0%)</option>
+				
+				<option value="file23">pvz_service/internal/lib/logger/setup.go (100.0%)</option>
+				
+				<option value="file24">pvz_service/internal/lib/logger/sl/sl.go (100.0%)</option>
+				
+				<option value="file25">pvz_service/internal/server/grpc/server.go (0.0%)</option>
+				
+				<option value="file26">pvz_service/internal/server/router.go (100.0%)</option>
+				
+				<option value="file27">pvz_service/internal/storage/postgres/postgres.go (90.0%)</option>
+				
+				<option value="file28">pvz_service/pkg/jwt/jwt.go (93.8%)</option>
+				
+				<option value="file29">pvz_service/pkg/jwt/mocks/jwt_mock.go (100.0%)</option>
+				
+				<option value="file30">pvz_service/pkg/metrics/metrics.go (40.0%)</option>
+				
+				<option value="file31">pvz_service/pkg/middleware/auth/auth.go (100.0%)</option>
+				
+				<option value="file32">pvz_service/pkg/middleware/metrics/metrics.go (100.0%)</option>
+				
+				<option value="file33">pvz_service/pkg/middleware/mwLogger/logger.go (100.0%)</option>
+				
+				<option value="file34">pvz_service/pkg/response/response.go (72.7%)</option>
+				
+				<option value="file35">pvz_service/protos/gen/go/pvz.pb.go (0.0%)</option>
+				
+				<option value="file36">pvz_service/protos/gen/go/pvz_grpc.pb.go (0.0%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package main
+
+import (
+        "fmt"
+        "log"
+        "net"
+
+        grpcServ "google.golang.org/grpc"
+        "google.golang.org/grpc/reflection"
+
+        "pvz_service/internal/app/pvz"
+        "pvz_service/internal/config"
+        "pvz_service/internal/lib/logger"
+        "pvz_service/internal/lib/logger/sl"
+        "pvz_service/internal/server/grpc"
+        "pvz_service/internal/storage/postgres"
+        pvzV1 "pvz_service/protos/gen/go"
+)
+
+func main() <span class="cov0" title="0">{
+        cfg, err := config.Load("config/config.yaml")
+        if err != nil </span><span class="cov0" title="0">{
+                log.Fatal("Ошибка загрузки конфига: ", err)
+        }</span>
+
+        <span class="cov0" title="0">myLogger := logger.SetupLogger(cfg.Logging.Env)
+
+        storage, err := postgres.New(&amp;cfg.Database)
+        if err != nil </span><span class="cov0" title="0">{
+                myLogger.Error("Ошибка подключения к БД", sl.Err(err))
+                return
+        }</span>
+        <span class="cov0" title="0">defer storage.Close()
+
+        repo := pvz.NewPVZRepository(storage)
+        service := pvz.NewPVZService(myLogger, repo)
+
+        addr := fmt.Sprintf(":%s", cfg.GRPC.Port)
+
+        lis, err := net.Listen("tcp", addr)
+        if err != nil </span><span class="cov0" title="0">{
+                log.Fatalf("не удалось запустить gRPC сервер: %v", err)
+        }</span>
+
+        <span class="cov0" title="0">grpcServer := grpc.NewGRPCServer(service)
+
+        s := grpcServ.NewServer()
+        pvzV1.RegisterPVZServiceServer(s, grpcServer)
+
+        reflection.Register(s)
+
+        log.Printf("gRPC сервер запущен на порту %s", addr)
+        if err := s.Serve(lis); err != nil </span><span class="cov0" title="0">{
+                log.Fatalf("ошибка при запуске gRPC сервера: %v", err)
+        }</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package main
+
+import (
+        "context"
+        "fmt"
+        "log"
+        "net/http"
+
+        "pvz_service/internal/app/auth"
+        "pvz_service/internal/app/product"
+        "pvz_service/internal/app/pvz"
+        "pvz_service/internal/app/reception"
+        "pvz_service/internal/config"
+        "pvz_service/internal/lib/logger"
+        "pvz_service/internal/lib/logger/sl"
+        "pvz_service/internal/server"
+        "pvz_service/internal/storage/postgres"
+        "pvz_service/pkg/jwt"
+        "pvz_service/pkg/metrics"
+)
+
+func main() <span class="cov0" title="0">{
+        cfg, err := config.Load("config/config.yaml")
+        if err != nil </span><span class="cov0" title="0">{
+                log.Fatal("Ошибка загрузки конфига: ", err)
+        }</span>
+
+        <span class="cov0" title="0">jwtService := jwt.NewJWTService(cfg.Auth.SecretKey)
+
+        myLogger := logger.SetupLogger(cfg.Logging.Env)
+
+        promPort := fmt.Sprintf(":%s", cfg.Prometheus.Port)
+        metrics.Init(promPort)
+
+        myLogger.Info("Конфигурация логера подгружена")
+
+        storage, err := postgres.New(&amp;cfg.Database)
+        if err != nil </span><span class="cov0" title="0">{
+                myLogger.Error("Ошибка подключения к БД", sl.Err(err))
+                return
+        }</span>
+        <span class="cov0" title="0">defer storage.Close()
+
+        ctx := context.Background()
+        err = storage.Ping(ctx)
+        if err != nil </span><span class="cov0" title="0">{
+                myLogger.Error("БД не пингуется", sl.Err(err))
+                return
+        }</span>
+
+        <span class="cov0" title="0">myLogger.Info("БД подключена")
+
+        userRepo := auth.NewUserRepository(storage)
+        authService := auth.NewAuthService(myLogger, userRepo, jwtService)
+        authHandler := auth.NewAuthHandler(myLogger, authService)
+
+        pvzRepo := pvz.NewPVZRepository(storage)
+        pvzService := pvz.NewPVZService(myLogger, pvzRepo)
+        pvzHandler := pvz.NewPVZHandler(myLogger, pvzService)
+
+        receptionRepo := reception.NewReceptionRepository(storage)
+        receptionService := reception.NewReceptionService(myLogger, receptionRepo)
+        receptionHandler := reception.NewReceptionHandler(myLogger, receptionService)
+
+        productRepo := product.NewProductRepository(storage)
+        productService := product.NewProductService(myLogger, productRepo, receptionRepo)
+        productHandler := product.NewProductHandler(myLogger, productService)
+
+        router := server.NewRouter(myLogger, jwtService, authHandler, pvzHandler, receptionHandler, productHandler)
+
+        httpAddr := fmt.Sprintf(":%s", cfg.HTTP.Port)
+        srv := &amp;http.Server{
+                Addr:         httpAddr,
+                Handler:      router,
+                ReadTimeout:  cfg.HTTP.ReadTimeout,
+                WriteTimeout: cfg.HTTP.WriteTimeout,
+        }
+
+        myLogger.Info("Запуск сервера")
+
+        err = srv.ListenAndServe()
+        if err != nil </span><span class="cov0" title="0">{
+                myLogger.Error("Ошибка запуска сервера", sl.Err(err))
+                return
+        }</span>
+
+        <span class="cov0" title="0">myLogger.Error("Сервер остановлен")</span>
+
+}
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package auth
+
+import (
+        "encoding/json"
+        "log/slog"
+        "net/http"
+
+        "github.com/go-chi/chi/v5/middleware"
+
+        "pvz_service/internal/lib/logger/sl"
+        "pvz_service/pkg/response"
+)
+
+type Handler struct {
+        myLogger *slog.Logger
+        service  ServiceInterface
+}
+
+func NewAuthHandler(myLogger *slog.Logger, service ServiceInterface) *Handler <span class="cov8" title="1">{
+        return &amp;Handler{
+                myLogger: myLogger,
+                service:  service,
+        }
+}</span>
+
+func (h *Handler) HandlerRegister(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        const op = "app.auth.HandlerRegister"
+
+        myLogger := h.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(r.Context())),
+        )
+
+        var registerRequest RegisterRequest
+
+        err := json.NewDecoder(r.Body).Decode(&amp;registerRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка декодирования", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос")
+                return
+        }</span>
+
+        <span class="cov8" title="1">user, err := h.service.ServiceCreateUser(r.Context(), &amp;registerRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("ошибка создания пользователя", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос")
+                return
+        }</span>
+
+        <span class="cov8" title="1">myLogger.Info("Пользователь создан", "email", user.Email)
+
+        response.MyResponseJSON(w, http.StatusCreated, &amp;RegisterResponse{
+                ID:    user.ID,
+                Email: user.Email,
+                Role:  user.Role,
+        })</span>
+}
+
+func (h *Handler) HandlerLogin(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        const op = "app.auth.HandlerLogin"
+
+        myLogger := h.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(r.Context())),
+        )
+
+        var loginRequest LoginRequest
+        err := json.NewDecoder(r.Body).Decode(&amp;loginRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка декодирования", sl.Err(err))
+                response.MyResponseError(w, http.StatusUnauthorized, "Неверные учетные данные")
+                return
+        }</span>
+
+        <span class="cov8" title="1">token, err := h.service.ServiceLoginUser(r.Context(), &amp;loginRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка авторизация", sl.Err(err))
+                response.MyResponseError(w, http.StatusUnauthorized, "Неверные учетные данные")
+                return
+        }</span>
+
+        <span class="cov8" title="1">myLogger.Info("Успешная авторизация")
+
+        response.MyResponseJSON(w, http.StatusOK, &amp;LoginResponse{
+                Token: token.Token,
+        })</span>
+}
+
+func (h *Handler) HandlerDummyLogin(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        const op = "app.auth.HandlerDummyLogin"
+
+        myLogger := h.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(r.Context())),
+        )
+
+        var dummyLoginRequest DummyLoginRequest
+
+        err := json.NewDecoder(r.Body).Decode(&amp;dummyLoginRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка декодирования", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос")
+                return
+        }</span>
+
+        <span class="cov8" title="1">token, err := h.service.ServiceDummyLogin(r.Context(), &amp;dummyLoginRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Неверный запрос", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос")
+                return
+        }</span>
+
+        <span class="cov8" title="1">myLogger.Info("Успешная авторизация через dummyLogin")
+
+        response.MyResponseJSON(w, http.StatusOK, &amp;LoginResponse{
+                Token: token.Token,
+        })</span>
+
+}
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">// Code generated by MockGen. DO NOT EDIT.
+// Source: internal/app/auth/repository.go
+//
+// Generated by this command:
+//
+//        mockgen -source=internal/app/auth/repository.go -destination=internal/app/auth/mocks/repository_mock.go -package=mocks
+//
+
+// Package mocks is a generated GoMock package.
+package mocks
+
+import (
+        context "context"
+        auth "pvz_service/internal/app/auth"
+        reflect "reflect"
+
+        gomock "go.uber.org/mock/gomock"
+)
+
+// MockUserRepository is a mock of UserRepository interface.
+type MockUserRepository struct {
+        ctrl     *gomock.Controller
+        recorder *MockUserRepositoryMockRecorder
+        isgomock struct{}
+}
+
+// MockUserRepositoryMockRecorder is the mock recorder for MockUserRepository.
+type MockUserRepositoryMockRecorder struct {
+        mock *MockUserRepository
+}
+
+// NewMockUserRepository creates a new mock instance.
+func NewMockUserRepository(ctrl *gomock.Controller) *MockUserRepository <span class="cov8" title="1">{
+        mock := &amp;MockUserRepository{ctrl: ctrl}
+        mock.recorder = &amp;MockUserRepositoryMockRecorder{mock}
+        return mock
+}</span>
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockUserRepository) EXPECT() *MockUserRepositoryMockRecorder <span class="cov8" title="1">{
+        return m.recorder
+}</span>
+
+// CheckUser mocks base method.
+func (m *MockUserRepository) CheckUser(ctx context.Context, registerRequest *auth.RegisterRequest) error <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "CheckUser", ctx, registerRequest)
+        ret0, _ := ret[0].(error)
+        return ret0
+}</span>
+
+// CheckUser indicates an expected call of CheckUser.
+func (mr *MockUserRepositoryMockRecorder) CheckUser(ctx, registerRequest any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CheckUser", reflect.TypeOf((*MockUserRepository)(nil).CheckUser), ctx, registerRequest)
+}</span>
+
+// CreateUser mocks base method.
+func (m *MockUserRepository) CreateUser(ctx context.Context, user *auth.User) error <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "CreateUser", ctx, user)
+        ret0, _ := ret[0].(error)
+        return ret0
+}</span>
+
+// CreateUser indicates an expected call of CreateUser.
+func (mr *MockUserRepositoryMockRecorder) CreateUser(ctx, user any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateUser", reflect.TypeOf((*MockUserRepository)(nil).CreateUser), ctx, user)
+}</span>
+
+// GetUserByEmail mocks base method.
+func (m *MockUserRepository) GetUserByEmail(ctx context.Context, email string) (*auth.User, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "GetUserByEmail", ctx, email)
+        ret0, _ := ret[0].(*auth.User)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// GetUserByEmail indicates an expected call of GetUserByEmail.
+func (mr *MockUserRepositoryMockRecorder) GetUserByEmail(ctx, email any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetUserByEmail", reflect.TypeOf((*MockUserRepository)(nil).GetUserByEmail), ctx, email)
+}</span>
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">// Code generated by MockGen. DO NOT EDIT.
+// Source: internal/app/auth/service.go
+//
+// Generated by this command:
+//
+//        mockgen -source=internal/app/auth/service.go -destination=internal/app/auth/mocks/service_mock.go -package=mocks
+//
+
+// Package mocks is a generated GoMock package.
+package mocks
+
+import (
+        context "context"
+        "pvz_service/internal/app/auth"
+        jwt "pvz_service/pkg/jwt"
+        reflect "reflect"
+
+        gomock "go.uber.org/mock/gomock"
+)
+
+// MockServiceInterface is a mock of ServiceInterface interface.
+type MockServiceInterface struct {
+        ctrl     *gomock.Controller
+        recorder *MockServiceInterfaceMockRecorder
+        isgomock struct{}
+}
+
+// MockServiceInterfaceMockRecorder is the mock recorder for MockServiceInterface.
+type MockServiceInterfaceMockRecorder struct {
+        mock *MockServiceInterface
+}
+
+// NewMockServiceInterface creates a new mock instance.
+func NewMockServiceInterface(ctrl *gomock.Controller) *MockServiceInterface <span class="cov8" title="1">{
+        mock := &amp;MockServiceInterface{ctrl: ctrl}
+        mock.recorder = &amp;MockServiceInterfaceMockRecorder{mock}
+        return mock
+}</span>
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockServiceInterface) EXPECT() *MockServiceInterfaceMockRecorder <span class="cov8" title="1">{
+        return m.recorder
+}</span>
+
+// ServiceCreateUser mocks base method.
+func (m *MockServiceInterface) ServiceCreateUser(ctx context.Context, registerRequest *auth.RegisterRequest) (*auth.User, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ServiceCreateUser", ctx, registerRequest)
+        ret0, _ := ret[0].(*auth.User)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ServiceCreateUser indicates an expected call of ServiceCreateUser.
+func (mr *MockServiceInterfaceMockRecorder) ServiceCreateUser(ctx, registerRequest any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ServiceCreateUser", reflect.TypeOf((*MockServiceInterface)(nil).ServiceCreateUser), ctx, registerRequest)
+}</span>
+
+// ServiceDummyLogin mocks base method.
+func (m *MockServiceInterface) ServiceDummyLogin(ctx context.Context, dummyRequest *auth.DummyLoginRequest) (*jwt.TokenResponse, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ServiceDummyLogin", ctx, dummyRequest)
+        ret0, _ := ret[0].(*jwt.TokenResponse)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ServiceDummyLogin indicates an expected call of ServiceDummyLogin.
+func (mr *MockServiceInterfaceMockRecorder) ServiceDummyLogin(ctx, dummyRequest any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ServiceDummyLogin", reflect.TypeOf((*MockServiceInterface)(nil).ServiceDummyLogin), ctx, dummyRequest)
+}</span>
+
+// ServiceLoginUser mocks base method.
+func (m *MockServiceInterface) ServiceLoginUser(ctx context.Context, loginRequest *auth.LoginRequest) (*jwt.TokenResponse, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ServiceLoginUser", ctx, loginRequest)
+        ret0, _ := ret[0].(*jwt.TokenResponse)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ServiceLoginUser indicates an expected call of ServiceLoginUser.
+func (mr *MockServiceInterfaceMockRecorder) ServiceLoginUser(ctx, loginRequest any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ServiceLoginUser", reflect.TypeOf((*MockServiceInterface)(nil).ServiceLoginUser), ctx, loginRequest)
+}</span>
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">package auth
+
+import (
+        "context"
+        "errors"
+        "fmt"
+
+        "pvz_service/internal/storage/postgres"
+)
+
+// mockgen -source=internal/app/auth/repository.go -destination=internal/app/auth/mocks/repository_mock.go -package=mocks
+
+type UserRepository interface {
+        CreateUser(ctx context.Context, user *User) error
+        CheckUser(ctx context.Context, registerRequest *RegisterRequest) error
+        GetUserByEmail(ctx context.Context, email string) (*User, error)
+}
+
+type Repo struct {
+        Storage *postgres.Storage
+}
+
+func NewUserRepository(storage *postgres.Storage) *Repo <span class="cov8" title="1">{
+        return &amp;Repo{
+                Storage: storage,
+        }
+}</span>
+
+func (u *Repo) CreateUser(ctx context.Context, user *User) error <span class="cov8" title="1">{
+        query := `
+                        INSERT INTO users (id, email, password, role) 
+                        VALUES ($1, $2, $3, $4)
+                        `
+
+        _, err := u.Storage.DB.ExecContext(
+                ctx,
+                query,
+                user.ID,
+                user.Email,
+                user.PasswordHash,
+                user.Role,
+        )
+        if err != nil </span><span class="cov8" title="1">{
+                return fmt.Errorf("ошибка создания пользователя: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+func (u *Repo) CheckUser(ctx context.Context, registerRequest *RegisterRequest) error <span class="cov8" title="1">{
+        var countUser int
+
+        query := "SELECT COUNT(*) FROM users WHERE email = $1"
+
+        err := u.Storage.DB.QueryRowContext(
+                ctx,
+                query,
+                registerRequest.Email,
+        ).Scan(&amp;countUser)
+        if err != nil </span><span class="cov8" title="1">{
+                return fmt.Errorf("произошла ошибка проверки пользователя: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">if countUser != 0 </span><span class="cov8" title="1">{
+                return errors.New("пользователь уже существует")
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+func (u *Repo) GetUserByEmail(ctx context.Context, email string) (*User, error) <span class="cov8" title="1">{
+        var user User
+
+        query := `
+                        SELECT id, email, password, role, created_at
+                        FROM users WHERE email = $1
+                        `
+
+        rows := u.Storage.DB.QueryRowContext(
+                ctx,
+                query,
+                email,
+        )
+
+        err := rows.Scan(
+                &amp;user.ID,
+                &amp;user.Email,
+                &amp;user.PasswordHash,
+                &amp;user.Role,
+                &amp;user.CreatedAt,
+        )
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("произошла ошибка получения пользователя: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return &amp;user, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file6" style="display: none">package auth
+
+import (
+        "context"
+        "errors"
+        "golang.org/x/crypto/bcrypt"
+        "log/slog"
+        "strings"
+
+        "github.com/go-chi/chi/v5/middleware"
+        "github.com/google/uuid"
+
+        "pvz_service/internal/lib/logger/sl"
+        "pvz_service/pkg/jwt"
+)
+
+// mockgen -source=internal/app/auth/service.go -destination=internal/app/auth/mocks/service_mock.go -package=mocks
+
+type ServiceInterface interface {
+        ServiceCreateUser(ctx context.Context, registerRequest *RegisterRequest) (*User, error)
+        ServiceLoginUser(ctx context.Context, loginRequest *LoginRequest) (*jwt.TokenResponse, error)
+        ServiceDummyLogin(ctx context.Context, dummyRequest *DummyLoginRequest) (*jwt.TokenResponse, error)
+}
+
+type Service struct {
+        userRepo      UserRepository
+        myLogger      *slog.Logger
+        jwtService    jwt.TokenService
+        HashPassword  func(password string) (string, error)
+        CheckPassword func(hashed, plain string) error
+}
+
+func NewAuthService(myLogger *slog.Logger, userRepo UserRepository, jwtService jwt.TokenService) *Service <span class="cov8" title="1">{
+        return &amp;Service{
+                userRepo:   userRepo,
+                myLogger:   myLogger,
+                jwtService: jwtService,
+                HashPassword: func(password string) (string, error) </span><span class="cov8" title="1">{
+                        bytes, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.MinCost)
+                        return string(bytes), err
+                }</span>,
+                CheckPassword: func(hashed, plain string) error <span class="cov8" title="1">{
+                        return bcrypt.CompareHashAndPassword([]byte(hashed), []byte(plain))
+                }</span>,
+        }
+}
+
+func (a *Service) ServiceCreateUser(ctx context.Context, registerRequest *RegisterRequest) (*User, error) <span class="cov8" title="1">{
+        const op = "app.auth.ServiceCreateUser"
+
+        myLogger := a.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(ctx)),
+        )
+
+        err := validateRegisterRequest(registerRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error(
+                        "Неверный запрос",
+                        sl.Err(err),
+                )
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">err = a.userRepo.CheckUser(ctx, registerRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Пользователь не может быть добавлен", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">passHash, err := a.HashPassword(registerRequest.Password)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("ошибка хеширования пароля", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">userID := uuid.New()
+
+        user := &amp;User{
+                ID:           userID,
+                Email:        registerRequest.Email,
+                PasswordHash: string(passHash),
+                Role:         registerRequest.Role,
+        }
+
+        err = a.userRepo.CreateUser(ctx, user)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка создания пользователя", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return user, nil</span>
+}
+
+func (a *Service) ServiceLoginUser(ctx context.Context, loginRequest *LoginRequest) (*jwt.TokenResponse, error) <span class="cov8" title="1">{
+        const op = "app.auth.ServiceLoginUser"
+
+        myLogger := a.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(ctx)),
+        )
+
+        user, err := a.userRepo.GetUserByEmail(ctx, loginRequest.Email)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка получения пользователя, неверный email", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">err = a.CheckPassword(user.PasswordHash, loginRequest.Password)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка получения пользователя, неверный пароль", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">token, err := a.jwtService.GenerateToken(user.Role)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка получения токена авторизации", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return token, nil</span>
+}
+
+func (a *Service) ServiceDummyLogin(ctx context.Context, dummyRequest *DummyLoginRequest) (*jwt.TokenResponse, error) <span class="cov8" title="1">{
+        op := "app.auth.ServiceDummyLogin"
+
+        myLogger := a.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(ctx)),
+        )
+
+        if dummyRequest.Role != RoleEmployee &amp;&amp; dummyRequest.Role != RoleModerator </span><span class="cov8" title="1">{
+                myLogger.Error("Неверная роль")
+                return nil, errors.New("неверная роль")
+        }</span>
+
+        <span class="cov8" title="1">token, err := a.jwtService.GenerateToken(dummyRequest.Role)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка получения токена авторизации", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return token, nil</span>
+}
+
+func validateRegisterRequest(r *RegisterRequest) error <span class="cov8" title="1">{
+        if r.Email == "" || r.Password == "" || r.Role == "" </span><span class="cov8" title="1">{
+                return errors.New("не все обязательные поля заполнены")
+        }</span>
+        <span class="cov8" title="1">if !isValidEmail(r.Email) </span><span class="cov8" title="1">{
+                return errors.New("невалидный email")
+        }</span>
+        <span class="cov8" title="1">if r.Role != RoleEmployee &amp;&amp; r.Role != RoleModerator </span><span class="cov8" title="1">{
+                return errors.New("некорректная роль")
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+func isValidEmail(email string) bool <span class="cov8" title="1">{
+        return strings.Contains(email, "@") &amp;&amp; strings.Contains(email, ".")
+}</span>
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package product
+
+import (
+        "encoding/json"
+        "log/slog"
+        "net/http"
+
+        "github.com/go-chi/chi/v5"
+        "github.com/go-chi/chi/v5/middleware"
+        "github.com/google/uuid"
+
+        "pvz_service/internal/lib/logger/sl"
+        "pvz_service/pkg/metrics"
+        "pvz_service/pkg/response"
+)
+
+type Handler struct {
+        myLogger       *slog.Logger
+        productService ServiceInterface
+}
+
+func NewProductHandler(myLogger *slog.Logger, productService ServiceInterface) *Handler <span class="cov8" title="1">{
+        return &amp;Handler{
+                myLogger:       myLogger,
+                productService: productService,
+        }
+}</span>
+
+func (p *Handler) HandlerAddProduct(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        const op = "app.product.HandlerAddProduct"
+
+        myLogger := p.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(r.Context())),
+        )
+
+        var createProductRequest *CreateProductRequest
+        err := json.NewDecoder(r.Body).Decode(&amp;createProductRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка декодирования", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос или нет активной приемки")
+                return
+        }</span>
+
+        <span class="cov8" title="1">product, err := p.productService.ServiceAddProduct(r.Context(), createProductRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка добавления товара", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос или нет активной приемки")
+                return
+        }</span>
+
+        <span class="cov8" title="1">metrics.ProductsAdded.Inc()
+
+        myLogger.Info("Товар добавлен", "id", product.ID)
+
+        response.MyResponseJSON(w, http.StatusCreated, &amp;Product{
+                ID:          product.ID,
+                DateTime:    product.DateTime,
+                Type:        product.Type,
+                ReceptionID: product.ReceptionID,
+        })
+
+        return</span>
+}
+
+func (p *Handler) HandlerDeleteProduct(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        const op = "app.product.HandlerDeleteProduct"
+
+        myLogger := p.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(r.Context())),
+        )
+
+        pvzIDInput := chi.URLParam(r, "pvzID")
+        pvzID, err := uuid.Parse(pvzIDInput)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Неверный pvzID", sl.Err(err))
+                response.MyResponseError(
+                        w,
+                        http.StatusBadRequest,
+                        "Неверный запрос, нет активной приемки или нет товаров для удаления",
+                )
+                return
+        }</span>
+
+        <span class="cov8" title="1">myLogger.Info("Получен pvzID", slog.String("pvzID", pvzID.String()))
+
+        product, err := p.productService.ServiceDeleteProduct(r.Context(), pvzID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка удаления товара", sl.Err(err))
+                response.MyResponseError(
+                        w,
+                        http.StatusBadRequest,
+                        "Неверный запрос, нет активной приемки или нет товаров для удаления",
+                )
+                return
+        }</span>
+
+        <span class="cov8" title="1">myLogger.Info("Товар добавлен", "id", product.ID)
+
+        response.MyResponseJSON(w, http.StatusOK, &amp;Product{
+                ID:          product.ID,
+                DateTime:    product.DateTime,
+                Type:        product.Type,
+                ReceptionID: product.ReceptionID,
+        })
+
+        return</span>
+}
+</pre>
+		
+		<pre class="file" id="file8" style="display: none">// Code generated by MockGen. DO NOT EDIT.
+// Source: internal/app/product/repository.go
+//
+// Generated by this command:
+//
+//        mockgen -source=internal/app/product/repository.go -destination=internal/app/product/mocks/repository_mock.go -package=mocks
+//
+
+// Package mocks is a generated GoMock package.
+package mocks
+
+import (
+        context "context"
+        product "pvz_service/internal/app/product"
+        reflect "reflect"
+
+        uuid "github.com/google/uuid"
+        gomock "go.uber.org/mock/gomock"
+)
+
+// MockRepoInterface is a mock of RepoInterface interface.
+type MockRepoInterface struct {
+        ctrl     *gomock.Controller
+        recorder *MockRepoInterfaceMockRecorder
+        isgomock struct{}
+}
+
+// MockRepoInterfaceMockRecorder is the mock recorder for MockRepoInterface.
+type MockRepoInterfaceMockRecorder struct {
+        mock *MockRepoInterface
+}
+
+// NewMockRepoInterface creates a new mock instance.
+func NewMockRepoInterface(ctrl *gomock.Controller) *MockRepoInterface <span class="cov8" title="1">{
+        mock := &amp;MockRepoInterface{ctrl: ctrl}
+        mock.recorder = &amp;MockRepoInterfaceMockRecorder{mock}
+        return mock
+}</span>
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockRepoInterface) EXPECT() *MockRepoInterfaceMockRecorder <span class="cov8" title="1">{
+        return m.recorder
+}</span>
+
+// AddProduct mocks base method.
+func (m *MockRepoInterface) AddProduct(ctx context.Context, arg1 *product.Product) (*product.Product, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "AddProduct", ctx, arg1)
+        ret0, _ := ret[0].(*product.Product)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// AddProduct indicates an expected call of AddProduct.
+func (mr *MockRepoInterfaceMockRecorder) AddProduct(ctx, arg1 any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AddProduct", reflect.TypeOf((*MockRepoInterface)(nil).AddProduct), ctx, arg1)
+}</span>
+
+// DeleteProduct mocks base method.
+func (m *MockRepoInterface) DeleteProduct(ctx context.Context, receptionID uuid.UUID) (*product.Product, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "DeleteProduct", ctx, receptionID)
+        ret0, _ := ret[0].(*product.Product)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// DeleteProduct indicates an expected call of DeleteProduct.
+func (mr *MockRepoInterfaceMockRecorder) DeleteProduct(ctx, receptionID any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteProduct", reflect.TypeOf((*MockRepoInterface)(nil).DeleteProduct), ctx, receptionID)
+}</span>
+</pre>
+		
+		<pre class="file" id="file9" style="display: none">// Code generated by MockGen. DO NOT EDIT.
+// Source: internal/app/product/service.go
+//
+// Generated by this command:
+//
+//        mockgen -source=internal/app/product/service.go -destination=internal/app/product/mocks/service_mock.go -package=mocks
+//
+
+// Package mocks is a generated GoMock package.
+package mocks
+
+import (
+        context "context"
+        product "pvz_service/internal/app/product"
+        reflect "reflect"
+
+        uuid "github.com/google/uuid"
+        gomock "go.uber.org/mock/gomock"
+)
+
+// MockServiceInterface is a mock of ServiceInterface interface.
+type MockServiceInterface struct {
+        ctrl     *gomock.Controller
+        recorder *MockServiceInterfaceMockRecorder
+        isgomock struct{}
+}
+
+// MockServiceInterfaceMockRecorder is the mock recorder for MockServiceInterface.
+type MockServiceInterfaceMockRecorder struct {
+        mock *MockServiceInterface
+}
+
+// NewMockServiceInterface creates a new mock instance.
+func NewMockServiceInterface(ctrl *gomock.Controller) *MockServiceInterface <span class="cov8" title="1">{
+        mock := &amp;MockServiceInterface{ctrl: ctrl}
+        mock.recorder = &amp;MockServiceInterfaceMockRecorder{mock}
+        return mock
+}</span>
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockServiceInterface) EXPECT() *MockServiceInterfaceMockRecorder <span class="cov8" title="1">{
+        return m.recorder
+}</span>
+
+// ServiceAddProduct mocks base method.
+func (m *MockServiceInterface) ServiceAddProduct(ctx context.Context, productRequest *product.CreateProductRequest) (*product.Product, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ServiceAddProduct", ctx, productRequest)
+        ret0, _ := ret[0].(*product.Product)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ServiceAddProduct indicates an expected call of ServiceAddProduct.
+func (mr *MockServiceInterfaceMockRecorder) ServiceAddProduct(ctx, productRequest any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ServiceAddProduct", reflect.TypeOf((*MockServiceInterface)(nil).ServiceAddProduct), ctx, productRequest)
+}</span>
+
+// ServiceDeleteProduct mocks base method.
+func (m *MockServiceInterface) ServiceDeleteProduct(ctx context.Context, pvzID uuid.UUID) (*product.Product, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ServiceDeleteProduct", ctx, pvzID)
+        ret0, _ := ret[0].(*product.Product)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ServiceDeleteProduct indicates an expected call of ServiceDeleteProduct.
+func (mr *MockServiceInterfaceMockRecorder) ServiceDeleteProduct(ctx, pvzID any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ServiceDeleteProduct", reflect.TypeOf((*MockServiceInterface)(nil).ServiceDeleteProduct), ctx, pvzID)
+}</span>
+</pre>
+		
+		<pre class="file" id="file10" style="display: none">package product
+
+import (
+        "context"
+        "fmt"
+
+        "github.com/google/uuid"
+
+        "pvz_service/internal/storage/postgres"
+)
+
+// mockgen -source=internal/app/product/repository.go -destination=internal/app/product/mocks/repository_mock.go -package=mocks
+
+type RepoInterface interface {
+        AddProduct(ctx context.Context, product *Product) (*Product, error)
+        DeleteProduct(ctx context.Context, receptionID uuid.UUID) (*Product, error)
+}
+
+type Repo struct {
+        storage *postgres.Storage
+}
+
+func NewProductRepository(storage *postgres.Storage) *Repo <span class="cov8" title="1">{
+        return &amp;Repo{
+                storage: storage,
+        }
+}</span>
+
+func (p *Repo) AddProduct(ctx context.Context, product *Product) (*Product, error) <span class="cov8" title="1">{
+        query := `
+                        INSERT INTO product(id, type, reception_id)
+                        VALUES ($1, $2, $3)
+                        RETURNING id, datetime, type, reception_id
+                        `
+
+        var createdProduct Product
+        err := p.storage.DB.QueryRowContext(
+                ctx,
+                query,
+                product.ID,
+                product.Type,
+                product.ReceptionID,
+        ).Scan(
+                &amp;createdProduct.ID,
+                &amp;createdProduct.DateTime,
+                &amp;createdProduct.Type,
+                &amp;createdProduct.ReceptionID,
+        )
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("ошибка добавления товаров: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return &amp;createdProduct, nil</span>
+}
+
+func (p *Repo) DeleteProduct(ctx context.Context, receptionID uuid.UUID) (*Product, error) <span class="cov8" title="1">{
+        query := `
+                        DELETE FROM product
+                        WHERE id = (
+                                SELECT id 
+                                FROM product
+                                WHERE reception_id = $1
+                                ORDER BY datetime DESC
+                                LIMIT 1
+                        )
+                        RETURNING id, datetime, type, reception_id
+                        `
+
+        var createdProduct Product
+        err := p.storage.DB.QueryRowContext(
+                ctx,
+                query,
+                receptionID,
+        ).Scan(
+                &amp;createdProduct.ID,
+                &amp;createdProduct.DateTime,
+                &amp;createdProduct.Type,
+                &amp;createdProduct.ReceptionID,
+        )
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("ошибка добавления товаров: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return &amp;createdProduct, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file11" style="display: none">package product
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "log/slog"
+
+        "github.com/go-chi/chi/v5/middleware"
+        "github.com/google/uuid"
+
+        "pvz_service/internal/app/reception"
+        "pvz_service/internal/lib/logger/sl"
+)
+
+// mockgen -source=internal/app/product/service.go -destination=internal/app/product/mocks/service_mock.go -package=mocks
+
+type ServiceInterface interface {
+        ServiceAddProduct(ctx context.Context, productRequest *CreateProductRequest) (*Product, error)
+        ServiceDeleteProduct(ctx context.Context, pvzID uuid.UUID) (*Product, error)
+}
+
+type Service struct {
+        productRepo   RepoInterface
+        receptionRepo reception.RepoInterface
+        myLogger      *slog.Logger
+}
+
+func NewProductService(myLogger *slog.Logger, productRepo RepoInterface, receptionRepo reception.RepoInterface) *Service <span class="cov8" title="1">{
+        return &amp;Service{
+                productRepo:   productRepo,
+                myLogger:      myLogger,
+                receptionRepo: receptionRepo,
+        }
+}</span>
+
+func (p *Service) ServiceAddProduct(ctx context.Context, productRequest *CreateProductRequest) (*Product, error) <span class="cov8" title="1">{
+        const op = "app.product.ServiceAddProduct"
+
+        myLogger := p.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(ctx)),
+        )
+
+        err := validateProductRequest(productRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">checkPVZ, err := p.receptionRepo.CheckValidPVZID(ctx, productRequest.PvzID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка при проверке на наличие пункта PVZ", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">if !checkPVZ </span><span class="cov8" title="1">{
+                myLogger.Error("Невалидный PvzID")
+                return nil, errors.New("неверный запрос или нет активной приемки")
+        }</span>
+
+        <span class="cov8" title="1">checkOpenReception, receptionID, err := p.receptionRepo.CheckOpenReception(ctx, productRequest.PvzID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка при проверке на наличие открытой приемки", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">if !checkOpenReception </span><span class="cov8" title="1">{
+                myLogger.Error("Нельзя добавить товар, так как нет открытых приемок")
+                return nil, errors.New("ошибка при проверке на наличие открытой приемки")
+        }</span>
+
+        <span class="cov8" title="1">product := &amp;Product{
+                ID:          uuid.New(),
+                Type:        productRequest.Type,
+                ReceptionID: receptionID,
+        }
+
+        addProduct, err := p.productRepo.AddProduct(ctx, product)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка добавления товара", sl.Err(err))
+                return nil, err
+        }</span>
+        <span class="cov8" title="1">return addProduct, nil</span>
+}
+
+func (p *Service) ServiceDeleteProduct(ctx context.Context, pvzID uuid.UUID) (*Product, error) <span class="cov8" title="1">{
+        const op = "app.product.ServiceDeleteProduct"
+
+        myLogger := p.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(ctx)),
+        )
+
+        checkPVZ, err := p.receptionRepo.CheckValidPVZID(ctx, pvzID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка при проверке на наличие пункта PVZ", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">if !checkPVZ </span><span class="cov8" title="1">{
+                myLogger.Error("Невалидный PvzID")
+                return nil, errors.New("неверный запрос или нет активной приемки")
+        }</span>
+
+        <span class="cov8" title="1">checkOpenReception, receptionID, err := p.receptionRepo.CheckOpenReception(ctx, pvzID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка при проверке на наличие открытой приемки", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">if !checkOpenReception </span><span class="cov8" title="1">{
+                myLogger.Error("Нельзя добавить товар, так как нет открытых приемок")
+                return nil, errors.New("ошибка при проверке на наличие открытой приемки")
+        }</span>
+
+        <span class="cov8" title="1">product, err := p.productRepo.DeleteProduct(ctx, receptionID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка удаления товара", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return product, nil</span>
+}
+
+func validateProductRequest(pvzRequest *CreateProductRequest) error <span class="cov8" title="1">{
+        validProduct := []string{TypeElectronics, TypeClothing, TypeShoes}
+        for _, product := range validProduct </span><span class="cov8" title="1">{
+                if pvzRequest.Type == product </span><span class="cov8" title="1">{
+                        return nil
+                }</span>
+        }
+
+        <span class="cov8" title="1">return fmt.Errorf("недопустимый товар: %s", pvzRequest.Type)</span>
+}
+</pre>
+		
+		<pre class="file" id="file12" style="display: none">package pvz
+
+import (
+        "encoding/json"
+        "log/slog"
+        "net/http"
+
+        "github.com/go-chi/chi/v5/middleware"
+
+        "pvz_service/internal/lib/logger/sl"
+        "pvz_service/pkg/metrics"
+        "pvz_service/pkg/response"
+)
+
+type Handler struct {
+        myLogger   *slog.Logger
+        pvzService ServiceInterface
+}
+
+func NewPVZHandler(myLogger *slog.Logger, pvzService ServiceInterface) *Handler <span class="cov8" title="1">{
+        return &amp;Handler{
+                myLogger:   myLogger,
+                pvzService: pvzService,
+        }
+}</span>
+
+func (p *Handler) HandlerAddPVZ(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        const op = "app.pvz.HandlerAddPVZ"
+
+        myLogger := p.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(r.Context())),
+        )
+
+        role, ok := r.Context().Value("role").(string)
+        if !ok </span><span class="cov8" title="1">{
+                myLogger.Error("Не была передана role")
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос")
+                return
+        }</span>
+
+        <span class="cov8" title="1">myLogger.Info("Пользователь с ролью: ", slog.String("role", role))
+
+        var pvzRequest *CreatePVZRequest
+        err := json.NewDecoder(r.Body).Decode(&amp;pvzRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка декодирования", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос")
+                return
+        }</span>
+
+        <span class="cov8" title="1">createdPVZ, err := p.pvzService.ServiceAddPVZ(r.Context(), pvzRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("ошибка создания ПВЗ", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос")
+                return
+        }</span>
+
+        <span class="cov8" title="1">metrics.PVZCreated.Inc()
+
+        myLogger.Info("ПВЗ создан", "id", createdPVZ.ID)
+
+        response.MyResponseJSON(w, http.StatusCreated, &amp;PVZ{
+                ID:               createdPVZ.ID,
+                RegistrationDate: createdPVZ.RegistrationDate,
+                City:             createdPVZ.City,
+        })</span>
+
+}
+
+func (p *Handler) HandlerGetPVZ(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        const op = "app.pvz.HandlerGetPVZ"
+
+        myLogger := p.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(r.Context())),
+        )
+
+        query := r.URL.Query()
+
+        page := query.Get("page")
+        limit := query.Get("limit")
+        startDate := query.Get("startDate")
+        endDate := query.Get("endDate")
+
+        result, err := p.pvzService.ServiceGetPVZs(r.Context(), startDate, endDate, page, limit)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("ошибка получения списка ПВЗ", "err", err)
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос")
+                return
+        }</span>
+
+        <span class="cov8" title="1">response.MyResponseJSON(w, http.StatusOK, result)</span>
+}
+</pre>
+		
+		<pre class="file" id="file13" style="display: none">// Code generated by MockGen. DO NOT EDIT.
+// Source: internal/app/pvz/repository.go
+//
+// Generated by this command:
+//
+//        mockgen -source=internal/app/pvz/repository.go -destination=internal/app/pvz/mocks/repository_mock.go -package=mocks
+//
+
+// Package mocks is a generated GoMock package.
+package mocks
+
+import (
+        context "context"
+        pvz "pvz_service/internal/app/pvz"
+        reflect "reflect"
+        time "time"
+
+        gomock "go.uber.org/mock/gomock"
+)
+
+// MockRepository is a mock of Repository interface.
+type MockRepository struct {
+        ctrl     *gomock.Controller
+        recorder *MockRepositoryMockRecorder
+        isgomock struct{}
+}
+
+// MockRepositoryMockRecorder is the mock recorder for MockRepository.
+type MockRepositoryMockRecorder struct {
+        mock *MockRepository
+}
+
+// NewMockRepository creates a new mock instance.
+func NewMockRepository(ctrl *gomock.Controller) *MockRepository <span class="cov8" title="1">{
+        mock := &amp;MockRepository{ctrl: ctrl}
+        mock.recorder = &amp;MockRepositoryMockRecorder{mock}
+        return mock
+}</span>
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockRepository) EXPECT() *MockRepositoryMockRecorder <span class="cov8" title="1">{
+        return m.recorder
+}</span>
+
+// CreatePVZ mocks base method.
+func (m *MockRepository) CreatePVZ(ctx context.Context, arg1 *pvz.PVZ) (*pvz.PVZ, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "CreatePVZ", ctx, arg1)
+        ret0, _ := ret[0].(*pvz.PVZ)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// CreatePVZ indicates an expected call of CreatePVZ.
+func (mr *MockRepositoryMockRecorder) CreatePVZ(ctx, arg1 any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreatePVZ", reflect.TypeOf((*MockRepository)(nil).CreatePVZ), ctx, arg1)
+}</span>
+
+// GetPVZWithReceptions mocks base method.
+func (m *MockRepository) GetPVZWithReceptions(ctx context.Context, startDate, endDate *time.Time, page, limit int) ([]*pvz.PVZWithReceptions, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "GetPVZWithReceptions", ctx, startDate, endDate, page, limit)
+        ret0, _ := ret[0].([]*pvz.PVZWithReceptions)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// GetPVZWithReceptions indicates an expected call of GetPVZWithReceptions.
+func (mr *MockRepositoryMockRecorder) GetPVZWithReceptions(ctx, startDate, endDate, page, limit any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPVZWithReceptions", reflect.TypeOf((*MockRepository)(nil).GetPVZWithReceptions), ctx, startDate, endDate, page, limit)
+}</span>
+</pre>
+		
+		<pre class="file" id="file14" style="display: none">// Code generated by MockGen. DO NOT EDIT.
+// Source: internal/app/pvz/service.go
+//
+// Generated by this command:
+//
+//        mockgen -source=internal/app/pvz/service.go -destination=internal/app/pvz/mocks/service_mock.go -package=mocks
+//
+
+// Package mocks is a generated GoMock package.
+package mocks
+
+import (
+        context "context"
+        pvz "pvz_service/internal/app/pvz"
+        reflect "reflect"
+
+        gomock "go.uber.org/mock/gomock"
+)
+
+// MockServiceInterface is a mock of ServiceInterface interface.
+type MockServiceInterface struct {
+        ctrl     *gomock.Controller
+        recorder *MockServiceInterfaceMockRecorder
+        isgomock struct{}
+}
+
+// MockServiceInterfaceMockRecorder is the mock recorder for MockServiceInterface.
+type MockServiceInterfaceMockRecorder struct {
+        mock *MockServiceInterface
+}
+
+// NewMockServiceInterface creates a new mock instance.
+func NewMockServiceInterface(ctrl *gomock.Controller) *MockServiceInterface <span class="cov8" title="1">{
+        mock := &amp;MockServiceInterface{ctrl: ctrl}
+        mock.recorder = &amp;MockServiceInterfaceMockRecorder{mock}
+        return mock
+}</span>
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockServiceInterface) EXPECT() *MockServiceInterfaceMockRecorder <span class="cov8" title="1">{
+        return m.recorder
+}</span>
+
+// ServiceAddPVZ mocks base method.
+func (m *MockServiceInterface) ServiceAddPVZ(ctx context.Context, pvzRequest *pvz.CreatePVZRequest) (*pvz.PVZ, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ServiceAddPVZ", ctx, pvzRequest)
+        ret0, _ := ret[0].(*pvz.PVZ)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ServiceAddPVZ indicates an expected call of ServiceAddPVZ.
+func (mr *MockServiceInterfaceMockRecorder) ServiceAddPVZ(ctx, pvzRequest any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ServiceAddPVZ", reflect.TypeOf((*MockServiceInterface)(nil).ServiceAddPVZ), ctx, pvzRequest)
+}</span>
+
+// ServiceGetPVZs mocks base method.
+func (m *MockServiceInterface) ServiceGetPVZs(ctx context.Context, startDateStr, endDateStr, page, limit string) ([]*pvz.PVZWithReceptions, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ServiceGetPVZs", ctx, startDateStr, endDateStr, page, limit)
+        ret0, _ := ret[0].([]*pvz.PVZWithReceptions)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ServiceGetPVZs indicates an expected call of ServiceGetPVZs.
+func (mr *MockServiceInterfaceMockRecorder) ServiceGetPVZs(ctx, startDateStr, endDateStr, page, limit any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ServiceGetPVZs", reflect.TypeOf((*MockServiceInterface)(nil).ServiceGetPVZs), ctx, startDateStr, endDateStr, page, limit)
+}</span>
+</pre>
+		
+		<pre class="file" id="file15" style="display: none">package pvz
+
+import (
+        "context"
+        "fmt"
+        "time"
+
+        "github.com/google/uuid"
+
+        "pvz_service/internal/app/product"
+        "pvz_service/internal/app/reception"
+        "pvz_service/internal/storage/postgres"
+)
+
+// mockgen -source=internal/app/gen/repository.go -destination=internal/app/gen/mocks/repository_mock.go -package=mocks
+
+type RepoInterface interface {
+        CreatePVZ(ctx context.Context, pvz *PVZ) (*PVZ, error)
+        GetPVZWithReceptions(
+                ctx context.Context,
+                startDate,
+                endDate *time.Time,
+                page,
+                limit int,
+        ) ([]*PVZWithReceptions, error)
+}
+
+type Repo struct {
+        storage *postgres.Storage
+}
+
+func NewPVZRepository(storage *postgres.Storage) *Repo <span class="cov8" title="1">{
+        return &amp;Repo{
+                storage: storage,
+        }
+}</span>
+
+func (p *Repo) CreatePVZ(ctx context.Context, pvz *PVZ) (*PVZ, error) <span class="cov8" title="1">{
+        query := `
+                        INSERT INTO pvz (id, city)
+                        VALUES ($1, $2)
+                        RETURNING id, city, registration_date;
+                        `
+
+        var createdPVZ PVZ
+        err := p.storage.DB.QueryRowContext(
+                ctx,
+                query,
+                pvz.ID,
+                pvz.City,
+        ).Scan(
+                &amp;createdPVZ.ID,
+                &amp;createdPVZ.City,
+                &amp;createdPVZ.RegistrationDate,
+        )
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("ошибка создания ПВЗ: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return &amp;createdPVZ, nil</span>
+}
+
+func (p *Repo) GetPVZWithReceptions(
+        ctx context.Context,
+        startDate,
+        endDate *time.Time,
+        page,
+        limit int,
+) ([]*PVZWithReceptions, error) <span class="cov8" title="1">{
+        offset := (page - 1) * limit
+
+        query := `
+                SELECT pvz.id, pvz.registration_date, pvz.city
+                FROM pvz
+                JOIN reception ON pvz.id = reception.pvz_id
+                WHERE ($1::timestamp IS NULL OR reception.datetime &gt;= $1)
+                  AND ($2::timestamp IS NULL OR reception.datetime &lt;= $2)
+                GROUP BY pvz.id
+                ORDER BY pvz.city
+                OFFSET $3 LIMIT $4
+        `
+
+        rows, err := p.storage.DB.QueryContext(ctx, query, startDate, endDate, offset, limit)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+        <span class="cov8" title="1">defer rows.Close()
+
+        var result []*PVZWithReceptions
+        for rows.Next() </span><span class="cov8" title="1">{
+                var pvz PVZ
+                if err := rows.Scan(&amp;pvz.ID, &amp;pvz.RegistrationDate, &amp;pvz.City); err != nil </span><span class="cov0" title="0">{
+                        return nil, err
+                }</span>
+
+                <span class="cov8" title="1">receptions, err := p.GetReceptionsWithProducts(ctx, pvz.ID, startDate, endDate)
+                if err != nil </span><span class="cov0" title="0">{
+                        return nil, err
+                }</span>
+
+                <span class="cov8" title="1">result = append(result, &amp;PVZWithReceptions{
+                        PVZ:        &amp;pvz,
+                        Receptions: receptions,
+                })</span>
+        }
+
+        <span class="cov8" title="1">return result, nil</span>
+}
+
+func (p *Repo) GetReceptionsWithProducts(
+        ctx context.Context,
+        pvzID uuid.UUID,
+        startDate,
+        endDate *time.Time,
+) ([]*ReceptionWithProducts, error) <span class="cov8" title="1">{
+        query := `
+                SELECT id, datetime, status
+                FROM reception
+                WHERE pvz_id = $1
+                AND ($2::timestamp IS NULL OR datetime &gt;= $2)
+                AND ($3::timestamp IS NULL OR datetime &lt;= $3)
+                ORDER BY datetime DESC
+        `
+
+        rows, err := p.storage.DB.QueryContext(ctx, query, pvzID, startDate, endDate)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+        <span class="cov8" title="1">defer rows.Close()
+
+        var result []*ReceptionWithProducts
+
+        for rows.Next() </span><span class="cov8" title="1">{
+                var rcp reception.Reception
+                if err := rows.Scan(&amp;rcp.ID, &amp;rcp.DateTime, &amp;rcp.Status); err != nil </span><span class="cov8" title="1">{
+                        return nil, err
+                }</span>
+                <span class="cov8" title="1">rcp.PvzID = pvzID
+
+                products, err := p.GetProductsByReception(ctx, rcp.ID)
+                if err != nil </span><span class="cov8" title="1">{
+                        return nil, err
+                }</span>
+
+                <span class="cov8" title="1">result = append(result, &amp;ReceptionWithProducts{
+                        Reception: &amp;rcp,
+                        Products:  products,
+                })</span>
+        }
+
+        <span class="cov8" title="1">return result, nil</span>
+}
+
+func (p *Repo) GetProductsByReception(ctx context.Context, receptionID uuid.UUID) ([]*product.Product, error) <span class="cov8" title="1">{
+        query := `
+                SELECT id, datetime, type, reception_id
+                FROM product
+                WHERE reception_id = $1
+                ORDER BY datetime DESC
+        `
+
+        rows, err := p.storage.DB.QueryContext(ctx, query, receptionID)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+        <span class="cov8" title="1">defer rows.Close()
+
+        var products []*product.Product
+        for rows.Next() </span><span class="cov8" title="1">{
+                var pr product.Product
+                if err := rows.Scan(&amp;pr.ID, &amp;pr.DateTime, &amp;pr.Type, &amp;pr.ReceptionID); err != nil </span><span class="cov8" title="1">{
+                        return nil, err
+                }</span>
+                <span class="cov8" title="1">products = append(products, &amp;pr)</span>
+        }
+
+        <span class="cov8" title="1">return products, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file16" style="display: none">package pvz
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "log/slog"
+        "strconv"
+        "time"
+
+        "github.com/go-chi/chi/v5/middleware"
+        "github.com/google/uuid"
+
+        "pvz_service/internal/lib/logger/sl"
+)
+
+// mockgen -source=internal/app/gen/service.go -destination=internal/app/gen/mocks/service_mock.go -package=mocks
+
+type ServiceInterface interface {
+        ServiceAddPVZ(ctx context.Context, pvzRequest *CreatePVZRequest) (*PVZ, error)
+        ServiceGetPVZs(ctx context.Context, startDateStr, endDateStr, page, limit string) ([]*PVZWithReceptions, error)
+}
+
+type Service struct {
+        pvzRepo  RepoInterface
+        myLogger *slog.Logger
+}
+
+func NewPVZService(myLogger *slog.Logger, pvzRepo RepoInterface) *Service <span class="cov8" title="1">{
+        return &amp;Service{
+                pvzRepo:  pvzRepo,
+                myLogger: myLogger,
+        }
+}</span>
+
+func (p *Service) ServiceAddPVZ(ctx context.Context, pvzRequest *CreatePVZRequest) (*PVZ, error) <span class="cov8" title="1">{
+        const op = "app.pvz.ServiceAddPVZ"
+
+        myLogger := p.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(ctx)),
+        )
+
+        err := validatePVZRequest(pvzRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">pvzID := uuid.New()
+
+        pvz := &amp;PVZ{
+                ID:   pvzID,
+                City: pvzRequest.City,
+        }
+
+        createdPVZ, err := p.pvzRepo.CreatePVZ(ctx, pvz)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка создания ПВЗ", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return createdPVZ, nil</span>
+}
+
+func (p *Service) ServiceGetPVZs(
+        ctx context.Context,
+        startDateStr,
+        endDateStr,
+        page,
+        limit string,
+) ([]*PVZWithReceptions, error) <span class="cov8" title="1">{
+        const op = "app.pvz.ServiceGetPVZs"
+
+        myLogger := p.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(ctx)),
+        )
+
+        validatePage, err := ValidateParamsPage(page)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Неверно указан параметр page: ", page, sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">validateLimit, err := ValidateParamsLimit(limit)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Неверно указан параметр limit: ", limit, sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">startDate, err := ValidateDate(startDateStr)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("неверный формат startDate", sl.Err(err))
+                return nil, fmt.Errorf("неверный формат startDate, должен быть RFC3339")
+        }</span>
+
+        <span class="cov8" title="1">endDate, err := ValidateDate(endDateStr)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("неверный формат endDate", sl.Err(err))
+                return nil, fmt.Errorf("неверный формат endDate, должен быть RFC3339")
+        }</span>
+
+        <span class="cov8" title="1">res, err := p.pvzRepo.GetPVZWithReceptions(ctx, startDate, endDate, validatePage, validateLimit)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка получения данных о ПВЗ", sl.Err(err))
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return res, nil</span>
+}
+
+func validatePVZRequest(pvzRequest *CreatePVZRequest) error <span class="cov8" title="1">{
+        validCity := []string{"Москва", "Санкт-Петербург", "Казань"}
+        for _, city := range validCity </span><span class="cov8" title="1">{
+                if pvzRequest.City == city </span><span class="cov8" title="1">{
+                        return nil
+                }</span>
+        }
+
+        <span class="cov8" title="1">return fmt.Errorf("недопустимый город: %s", pvzRequest.City)</span>
+}
+
+func ValidateParamsPage(page string) (int, error) <span class="cov8" title="1">{
+        if page == "" </span><span class="cov8" title="1">{
+                return 1, nil
+        }</span>
+
+        <span class="cov8" title="1">pageInt, err := strconv.Atoi(page)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0, err
+        }</span>
+
+        <span class="cov8" title="1">if pageInt &lt; 1 </span><span class="cov8" title="1">{
+                return 0, errors.New("page должен быть ≥ 1")
+        }</span>
+
+        <span class="cov8" title="1">return pageInt, nil</span>
+}
+
+func ValidateParamsLimit(limit string) (int, error) <span class="cov8" title="1">{
+        if limit == "" </span><span class="cov8" title="1">{
+                return 10, nil
+        }</span>
+
+        <span class="cov8" title="1">limitInt, err := strconv.Atoi(limit)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0, fmt.Errorf("limit должен быть числом: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">if limitInt &lt; 1 || limitInt &gt; 30 </span><span class="cov8" title="1">{
+                return 0, errors.New("limit должен быть от 1 до 30 включительно")
+        }</span>
+
+        <span class="cov8" title="1">return limitInt, nil</span>
+}
+
+func ValidateDate(dateStr string) (*time.Time, error) <span class="cov8" title="1">{
+        if dateStr == "" </span><span class="cov8" title="1">{
+                return nil, nil
+        }</span>
+
+        <span class="cov8" title="1">t, err := time.Parse(time.RFC3339, dateStr)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("неверный формат даты, должен быть RFC3339: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return &amp;t, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file17" style="display: none">package reception
+
+import (
+        "encoding/json"
+        "log/slog"
+        "net/http"
+
+        "github.com/go-chi/chi/v5"
+        "github.com/go-chi/chi/v5/middleware"
+        "github.com/google/uuid"
+
+        "pvz_service/internal/lib/logger/sl"
+        "pvz_service/pkg/metrics"
+        "pvz_service/pkg/response"
+)
+
+type Handler struct {
+        myLogger         *slog.Logger
+        receptionService ServiceInterface
+}
+
+func NewReceptionHandler(myLogger *slog.Logger, receptionService ServiceInterface) *Handler <span class="cov8" title="1">{
+        return &amp;Handler{
+                myLogger:         myLogger,
+                receptionService: receptionService,
+        }
+}</span>
+
+func (rec *Handler) HandlerOpenReception(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        const op = "app.reception.HandlerOpenReception"
+
+        myLogger := rec.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(r.Context())),
+        )
+
+        var receptionRequest *OpenReceptionRequest
+        err := json.NewDecoder(r.Body).Decode(&amp;receptionRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка декодирования", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос или есть незакрытая приемка")
+                return
+        }</span>
+
+        <span class="cov8" title="1">openReception, err := rec.receptionService.ServiceOpenReception(r.Context(), receptionRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка открытия приемки", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос или есть незакрытая приемка")
+                return
+        }</span>
+
+        <span class="cov8" title="1">metrics.ReceptionsCreated.Inc()
+
+        myLogger.Info("Приемка открыта", "id", openReception.ID)
+
+        response.MyResponseJSON(w, http.StatusCreated, &amp;Reception{
+                ID:       openReception.ID,
+                DateTime: openReception.DateTime,
+                PvzID:    openReception.PvzID,
+                Status:   openReception.Status,
+        })</span>
+}
+
+func (rec *Handler) HandlerCloseReception(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        const op = "app.reception.HandlerCloseReception"
+
+        myLogger := rec.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(r.Context())),
+        )
+
+        pvzIDInput := chi.URLParam(r, "pvzID")
+        pvzID, err := uuid.Parse(pvzIDInput)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Неверный UUID ПВЗ", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос или приемка уже закрыта")
+                return
+        }</span>
+
+        <span class="cov8" title="1">receptionRequest := &amp;CloseReceptionRequest{
+                PvzID: pvzID,
+        }
+
+        closeReception, err := rec.receptionService.ServiceCloseReception(r.Context(), receptionRequest)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка закрытия приемки", sl.Err(err))
+                response.MyResponseError(w, http.StatusBadRequest, "Неверный запрос или приемка уже закрыта")
+                return
+        }</span>
+
+        <span class="cov8" title="1">myLogger.Info("Приемка закрыта", "id", closeReception.ID)
+
+        response.MyResponseJSON(w, http.StatusOK, &amp;Reception{
+                ID:       closeReception.ID,
+                DateTime: closeReception.DateTime,
+                PvzID:    closeReception.PvzID,
+                Status:   closeReception.Status,
+        })</span>
+}
+</pre>
+		
+		<pre class="file" id="file18" style="display: none">// Code generated by MockGen. DO NOT EDIT.
+// Source: internal/app/reception/repository.go
+//
+// Generated by this command:
+//
+//        mockgen -source=internal/app/reception/repository.go -destination=internal/app/reception/mocks/repository_mock.go -package=mocks
+//
+
+// Package mocks is a generated GoMock package.
+package mocks
+
+import (
+        context "context"
+        reception "pvz_service/internal/app/reception"
+        reflect "reflect"
+
+        uuid "github.com/google/uuid"
+        gomock "go.uber.org/mock/gomock"
+)
+
+// MockRepoInterface is a mock of RepoInterface interface.
+type MockRepoInterface struct {
+        ctrl     *gomock.Controller
+        recorder *MockRepoInterfaceMockRecorder
+        isgomock struct{}
+}
+
+// MockRepoInterfaceMockRecorder is the mock recorder for MockRepoInterface.
+type MockRepoInterfaceMockRecorder struct {
+        mock *MockRepoInterface
+}
+
+// NewMockRepoInterface creates a new mock instance.
+func NewMockRepoInterface(ctrl *gomock.Controller) *MockRepoInterface <span class="cov8" title="1">{
+        mock := &amp;MockRepoInterface{ctrl: ctrl}
+        mock.recorder = &amp;MockRepoInterfaceMockRecorder{mock}
+        return mock
+}</span>
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockRepoInterface) EXPECT() *MockRepoInterfaceMockRecorder <span class="cov8" title="1">{
+        return m.recorder
+}</span>
+
+// CheckOpenReception mocks base method.
+func (m *MockRepoInterface) CheckOpenReception(ctx context.Context, pvzID uuid.UUID) (bool, uuid.UUID, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "CheckOpenReception", ctx, pvzID)
+        ret0, _ := ret[0].(bool)
+        ret1, _ := ret[1].(uuid.UUID)
+        ret2, _ := ret[2].(error)
+        return ret0, ret1, ret2
+}</span>
+
+// CheckOpenReception indicates an expected call of CheckOpenReception.
+func (mr *MockRepoInterfaceMockRecorder) CheckOpenReception(ctx, pvzID any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CheckOpenReception", reflect.TypeOf((*MockRepoInterface)(nil).CheckOpenReception), ctx, pvzID)
+}</span>
+
+// CheckValidPVZID mocks base method.
+func (m *MockRepoInterface) CheckValidPVZID(ctx context.Context, pvzID uuid.UUID) (bool, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "CheckValidPVZID", ctx, pvzID)
+        ret0, _ := ret[0].(bool)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// CheckValidPVZID indicates an expected call of CheckValidPVZID.
+func (mr *MockRepoInterfaceMockRecorder) CheckValidPVZID(ctx, pvzID any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CheckValidPVZID", reflect.TypeOf((*MockRepoInterface)(nil).CheckValidPVZID), ctx, pvzID)
+}</span>
+
+// CloseReception mocks base method.
+func (m *MockRepoInterface) CloseReception(ctx context.Context, receptionID uuid.UUID) (*reception.Reception, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "CloseReception", ctx, receptionID)
+        ret0, _ := ret[0].(*reception.Reception)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// CloseReception indicates an expected call of CloseReception.
+func (mr *MockRepoInterfaceMockRecorder) CloseReception(ctx, receptionID any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CloseReception", reflect.TypeOf((*MockRepoInterface)(nil).CloseReception), ctx, receptionID)
+}</span>
+
+// CreateReception mocks base method.
+func (m *MockRepoInterface) CreateReception(ctx context.Context, arg1 *reception.Reception) (*reception.Reception, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "CreateReception", ctx, arg1)
+        ret0, _ := ret[0].(*reception.Reception)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// CreateReception indicates an expected call of CreateReception.
+func (mr *MockRepoInterfaceMockRecorder) CreateReception(ctx, arg1 any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateReception", reflect.TypeOf((*MockRepoInterface)(nil).CreateReception), ctx, arg1)
+}</span>
+</pre>
+		
+		<pre class="file" id="file19" style="display: none">// Code generated by MockGen. DO NOT EDIT.
+// Source: internal/app/reception/service.go
+//
+// Generated by this command:
+//
+//        mockgen -source=internal/app/reception/service.go -destination=internal/app/reception/mocks/service_mock.go -package=mocks
+//
+
+// Package mocks is a generated GoMock package.
+package mocks
+
+import (
+        context "context"
+        reception "pvz_service/internal/app/reception"
+        reflect "reflect"
+
+        gomock "go.uber.org/mock/gomock"
+)
+
+// MockServiceInterface is a mock of ServiceInterface interface.
+type MockServiceInterface struct {
+        ctrl     *gomock.Controller
+        recorder *MockServiceInterfaceMockRecorder
+        isgomock struct{}
+}
+
+// MockServiceInterfaceMockRecorder is the mock recorder for MockServiceInterface.
+type MockServiceInterfaceMockRecorder struct {
+        mock *MockServiceInterface
+}
+
+// NewMockServiceInterface creates a new mock instance.
+func NewMockServiceInterface(ctrl *gomock.Controller) *MockServiceInterface <span class="cov8" title="1">{
+        mock := &amp;MockServiceInterface{ctrl: ctrl}
+        mock.recorder = &amp;MockServiceInterfaceMockRecorder{mock}
+        return mock
+}</span>
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockServiceInterface) EXPECT() *MockServiceInterfaceMockRecorder <span class="cov8" title="1">{
+        return m.recorder
+}</span>
+
+// ServiceCloseReception mocks base method.
+func (m *MockServiceInterface) ServiceCloseReception(ctx context.Context, receptionRequest *reception.CloseReceptionRequest) (*reception.Reception, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ServiceCloseReception", ctx, receptionRequest)
+        ret0, _ := ret[0].(*reception.Reception)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ServiceCloseReception indicates an expected call of ServiceCloseReception.
+func (mr *MockServiceInterfaceMockRecorder) ServiceCloseReception(ctx, receptionRequest any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ServiceCloseReception", reflect.TypeOf((*MockServiceInterface)(nil).ServiceCloseReception), ctx, receptionRequest)
+}</span>
+
+// ServiceOpenReception mocks base method.
+func (m *MockServiceInterface) ServiceOpenReception(ctx context.Context, receptionRequest *reception.OpenReceptionRequest) (*reception.Reception, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ServiceOpenReception", ctx, receptionRequest)
+        ret0, _ := ret[0].(*reception.Reception)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ServiceOpenReception indicates an expected call of ServiceOpenReception.
+func (mr *MockServiceInterfaceMockRecorder) ServiceOpenReception(ctx, receptionRequest any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ServiceOpenReception", reflect.TypeOf((*MockServiceInterface)(nil).ServiceOpenReception), ctx, receptionRequest)
+}</span>
+</pre>
+		
+		<pre class="file" id="file20" style="display: none">package reception
+
+import (
+        "context"
+        "database/sql"
+        "errors"
+        "fmt"
+
+        "github.com/google/uuid"
+
+        "pvz_service/internal/storage/postgres"
+)
+
+// mockgen -source=internal/app/reception/repository.go -destination=internal/app/reception/mocks/repository_mock.go -package=mocks
+
+type RepoInterface interface {
+        CreateReception(ctx context.Context, reception *Reception) (*Reception, error)
+        CheckValidPVZID(ctx context.Context, pvzID uuid.UUID) (bool, error)
+        CheckOpenReception(ctx context.Context, pvzID uuid.UUID) (bool, uuid.UUID, error)
+        CloseReception(ctx context.Context, receptionID uuid.UUID) (*Reception, error)
+}
+
+type Repo struct {
+        storage *postgres.Storage
+}
+
+func NewReceptionRepository(storage *postgres.Storage) *Repo <span class="cov8" title="1">{
+        return &amp;Repo{
+                storage: storage,
+        }
+}</span>
+
+func (r *Repo) CreateReception(ctx context.Context, reception *Reception) (*Reception, error) <span class="cov8" title="1">{
+        query := `
+                        INSERT INTO reception (id, pvz_id, status)
+                        VALUES ($1, $2, $3)
+                        RETURNING id, pvz_id, datetime, status;
+        `
+
+        var openReception Reception
+        err := r.storage.DB.QueryRowContext(
+                ctx,
+                query,
+                reception.ID,
+                reception.PvzID,
+                StatusInProgress,
+        ).Scan(
+                &amp;openReception.ID,
+                &amp;openReception.PvzID,
+                &amp;openReception.DateTime,
+                &amp;openReception.Status,
+        )
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("ошибка создания приемки: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return &amp;openReception, nil</span>
+
+}
+
+func (r *Repo) CheckValidPVZID(ctx context.Context, pvzID uuid.UUID) (bool, error) <span class="cov8" title="1">{
+        query := `
+                SELECT COUNT(*)
+                FROM pvz
+                WHERE id = $1
+        `
+
+        var count int
+        err := r.storage.DB.QueryRowContext(
+                ctx,
+                query,
+                pvzID,
+        ).Scan(&amp;count)
+        if err != nil </span><span class="cov8" title="1">{
+                if errors.Is(err, sql.ErrNoRows) </span><span class="cov8" title="1">{
+                        return false, nil
+                }</span>
+                <span class="cov8" title="1">return false, err</span>
+        }
+
+        <span class="cov8" title="1">return count &gt; 0, nil</span>
+}
+
+func (r *Repo) CheckOpenReception(ctx context.Context, pvzID uuid.UUID) (bool, uuid.UUID, error) <span class="cov8" title="1">{
+        query := `
+                SELECT id
+                FROM reception
+                WHERE pvz_id = $1 and status = $2
+        `
+
+        var receptionID uuid.UUID
+        err := r.storage.DB.QueryRowContext(
+                ctx,
+                query,
+                pvzID,
+                StatusInProgress,
+        ).Scan(&amp;receptionID)
+
+        if err != nil </span><span class="cov8" title="1">{
+                if errors.Is(err, sql.ErrNoRows) </span><span class="cov8" title="1">{
+                        return false, uuid.Nil, nil
+                }</span>
+                <span class="cov8" title="1">return false, uuid.Nil, err</span>
+        }
+
+        <span class="cov8" title="1">return true, receptionID, nil</span>
+}
+
+func (r *Repo) CloseReception(ctx context.Context, receptionID uuid.UUID) (*Reception, error) <span class="cov8" title="1">{
+        query := `
+                        UPDATE reception 
+                        SET status = $1
+                        WHERE id = $2
+                        RETURNING id, pvz_id, datetime, status;
+        `
+
+        var openReception Reception
+        err := r.storage.DB.QueryRowContext(
+                ctx,
+                query,
+                StatusClosed,
+                receptionID,
+        ).Scan(
+                &amp;openReception.ID,
+                &amp;openReception.PvzID,
+                &amp;openReception.DateTime,
+                &amp;openReception.Status,
+        )
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("ошибка закрытия приемки: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return &amp;openReception, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file21" style="display: none">package reception
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "log/slog"
+
+        "github.com/go-chi/chi/v5/middleware"
+        "github.com/google/uuid"
+
+        "pvz_service/internal/lib/logger/sl"
+)
+
+// mockgen -source=internal/app/reception/service.go -destination=internal/app/reception/mocks/service_mock.go -package=mocks
+
+type ServiceInterface interface {
+        ServiceOpenReception(ctx context.Context, receptionRequest *OpenReceptionRequest) (*Reception, error)
+        ServiceCloseReception(ctx context.Context, receptionRequest *CloseReceptionRequest) (*Reception, error)
+}
+
+type Service struct {
+        receptionRepo RepoInterface
+        myLogger      *slog.Logger
+}
+
+func NewReceptionService(myLogger *slog.Logger, receptionRepo RepoInterface) *Service <span class="cov8" title="1">{
+        return &amp;Service{
+                receptionRepo: receptionRepo,
+                myLogger:      myLogger,
+        }
+}</span>
+
+func (r *Service) ServiceOpenReception(
+        ctx context.Context,
+        receptionRequest *OpenReceptionRequest,
+) (*Reception, error) <span class="cov8" title="1">{
+        const op = "app.reception.ServiceOpenReception"
+
+        myLogger := r.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(ctx)),
+        )
+
+        checkPVZ, err := r.receptionRepo.CheckValidPVZID(ctx, receptionRequest.PvzID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка при проверке на наличие пункта PVZ", sl.Err(err))
+                return nil, fmt.Errorf("ошибка при проверке на наличие пункта PVZ: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">if !checkPVZ </span><span class="cov8" title="1">{
+                myLogger.Error("Невалидный PvzID")
+                return nil, errors.New("неверный запрос или есть незакрытая приемка")
+        }</span>
+
+        <span class="cov8" title="1">checkOpenReception, receptionID, err := r.receptionRepo.CheckOpenReception(ctx, receptionRequest.PvzID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка при проверке на наличие открытой приемки", sl.Err(err))
+                return nil, fmt.Errorf("ошибка при проверке на наличие открытой приемки: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">if checkOpenReception </span><span class="cov8" title="1">{
+                myLogger.Error(
+                        "Нельзя создать приемку, так как есть незакрытая id: %v",
+                        slog.String("receptionID", receptionID.String()),
+                )
+                return nil, errors.New("неверный запрос или есть незакрытая приемка")
+        }</span>
+
+        <span class="cov8" title="1">reception := &amp;Reception{
+                ID:    uuid.New(),
+                PvzID: receptionRequest.PvzID,
+        }
+
+        openReception, err := r.receptionRepo.CreateReception(ctx, reception)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка создания приемки", sl.Err(err))
+                return nil, fmt.Errorf("oшибка создания приемки: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return openReception, nil</span>
+}
+
+func (r *Service) ServiceCloseReception(
+        ctx context.Context,
+        receptionRequest *CloseReceptionRequest,
+) (*Reception, error) <span class="cov8" title="1">{
+        const op = "app.reception.ServiceCloseReception"
+
+        myLogger := r.myLogger.With(
+                slog.String("op", op),
+                slog.String("request_id", middleware.GetReqID(ctx)),
+        )
+
+        checkPVZ, err := r.receptionRepo.CheckValidPVZID(ctx, receptionRequest.PvzID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка при проверке на наличие пункта PVZ", sl.Err(err))
+                return nil, fmt.Errorf("oшибка при проверке на наличие пункта PVZ: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">if !checkPVZ </span><span class="cov8" title="1">{
+                myLogger.Error("Невалидный PvzID")
+                return nil, errors.New("неверный запрос или приемка уже закрыта")
+        }</span>
+
+        <span class="cov8" title="1">checkOpenReception, receptionID, err := r.receptionRepo.CheckOpenReception(ctx, receptionRequest.PvzID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка при проверке на наличие открытой приемки", sl.Err(err))
+                return nil, fmt.Errorf("ошибка при проверке на наличие открытой приемки: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">if !checkOpenReception </span><span class="cov8" title="1">{
+                myLogger.Error("Нельзя закрыть проверку, так как нет открытых")
+                return nil, errors.New("неверный запрос или приемка уже закрыта")
+        }</span>
+
+        <span class="cov8" title="1">closeReception, err := r.receptionRepo.CloseReception(ctx, receptionID)
+        if err != nil </span><span class="cov8" title="1">{
+                myLogger.Error("Ошибка закрытия приемки", sl.Err(err))
+                return nil, fmt.Errorf("oшибка закрытия приемки: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">return closeReception, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file22" style="display: none">package config
+
+import (
+        "time"
+
+        "github.com/ilyakaznacheev/cleanenv"
+)
+
+type Config struct {
+        HTTP       HTTPConfig       `yaml:"http"`
+        GRPC       GRPCConfig       `yaml:"grpc"`
+        Prometheus PrometheusConfig `yaml:"prometheus"`
+        Database   DatabaseConfig   `yaml:"database"`
+        Auth       AuthConfig       `yaml:"auth"`
+        Logging    LoggingConfig    `yaml:"logging"`
+}
+
+type HTTPConfig struct {
+        Addr           string        `yaml:"address"`
+        Port           string        `yaml:"port"`
+        ReadTimeout    time.Duration `yaml:"read_timeout"`
+        WriteTimeout   time.Duration `yaml:"write_timeout"`
+        MaxHeaderBytes int           `yaml:"max_header_bytes"`
+}
+
+type GRPCConfig struct {
+        Port string `yaml:"port"`
+}
+
+type PrometheusConfig struct {
+        Port string `yaml:"port"`
+}
+
+type DatabaseConfig struct {
+        ServerAddress      string `yaml:"server_address"`
+        Username           string `yaml:"username"`
+        Password           string `yaml:"password"`
+        Host               string `yaml:"host"`
+        Port               string `yaml:"port"`
+        Database           string `yaml:"name"`
+        MaxOpenConnections int    `yaml:"max_open_conns"`
+        MaxIdleConnections int    `yaml:"max_idle_conns"`
+        ConnMaxLifetime    int    `yaml:"conn_max_lifetime"` // in minutes
+}
+
+type AuthConfig struct {
+        SecretKey string `yaml:"secret_key"`
+}
+
+type LoggingConfig struct {
+        Env string `yaml:"env"`
+}
+
+func Load(path string) (*Config, error) <span class="cov8" title="1">{
+        var cfg Config
+
+        err := cleanenv.ReadConfig(path, &amp;cfg)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return &amp;cfg, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file23" style="display: none">package logger
+
+import (
+        "log/slog"
+        "os"
+)
+
+const (
+        envLocal = "local"
+        envDev   = "dev"
+        envProd  = "prod"
+)
+
+func SetupLogger(env string) *slog.Logger <span class="cov8" title="1">{
+        var myLog *slog.Logger
+
+        switch env </span>{
+        case envLocal:<span class="cov8" title="1">
+                myLog = slog.New(
+                        slog.NewTextHandler(
+                                os.Stdout,
+                                &amp;slog.HandlerOptions{Level: slog.LevelDebug},
+                        ),
+                )</span>
+        case envDev:<span class="cov8" title="1">
+                myLog = slog.New(
+                        slog.NewJSONHandler(
+                                os.Stdout,
+                                &amp;slog.HandlerOptions{Level: slog.LevelDebug},
+                        ),
+                )</span>
+        case envProd:<span class="cov8" title="1">
+                myLog = slog.New(
+                        slog.NewJSONHandler(
+                                os.Stdout,
+                                &amp;slog.HandlerOptions{Level: slog.LevelInfo},
+                        ),
+                )</span>
+        }
+
+        <span class="cov8" title="1">return myLog</span>
+}
+</pre>
+		
+		<pre class="file" id="file24" style="display: none">package sl
+
+import (
+        "log/slog"
+)
+
+func Err(err error) slog.Attr <span class="cov8" title="1">{
+        return slog.Attr{
+                Key:   "error",
+                Value: slog.StringValue(err.Error()),
+        }
+}</span>
+
+func Op(op string) slog.Attr <span class="cov8" title="1">{
+        return slog.Attr{
+                Key:   "op",
+                Value: slog.StringValue(op),
+        }
+}</span>
+</pre>
+		
+		<pre class="file" id="file25" style="display: none">package grpc
+
+import (
+        "context"
+        "google.golang.org/protobuf/types/known/timestamppb"
+
+        "pvz_service/internal/app/pvz"
+        pvzV1 "pvz_service/protos/gen/go"
+)
+
+type GRPCServer struct {
+        pvzV1.UnimplementedPVZServiceServer
+        pvzService pvz.ServiceInterface
+}
+
+func NewGRPCServer(pvzService pvz.ServiceInterface) *GRPCServer <span class="cov0" title="0">{
+        return &amp;GRPCServer{
+                pvzService: pvzService,
+        }
+}</span>
+
+func (s *GRPCServer) GetPVZList(ctx context.Context, req *pvzV1.GetPVZListRequest) (*pvzV1.GetPVZListResponse, error) <span class="cov0" title="0">{
+        pvzList, err := s.pvzService.ServiceGetPVZs(ctx, "", "", "", "")
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+
+        <span class="cov0" title="0">var result []*pvzV1.PVZ
+        for _, item := range pvzList </span><span class="cov0" title="0">{
+                regDate := timestamppb.New(item.PVZ.RegistrationDate)
+
+                result = append(result, &amp;pvzV1.PVZ{
+                        Id:               item.PVZ.ID.String(),
+                        City:             item.PVZ.City,
+                        RegistrationDate: regDate,
+                })
+        }</span>
+
+        <span class="cov0" title="0">return &amp;pvzV1.GetPVZListResponse{
+                Pvzs: result,
+        }, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file26" style="display: none">package server
+
+import (
+        "log/slog"
+
+        "github.com/go-chi/chi/v5"
+        "github.com/go-chi/chi/v5/middleware"
+
+        "pvz_service/internal/app/auth"
+        "pvz_service/internal/app/product"
+        "pvz_service/internal/app/pvz"
+        "pvz_service/internal/app/reception"
+        "pvz_service/pkg/jwt"
+        mwAuth "pvz_service/pkg/middleware/auth"
+        mwMetrics "pvz_service/pkg/middleware/metrics"
+        "pvz_service/pkg/middleware/mwLogger"
+)
+
+func NewRouter(
+        myLogger *slog.Logger,
+        jwtService *jwt.JWTService,
+        authHandler *auth.Handler,
+        pvzHandler *pvz.Handler,
+        receptionHandler *reception.Handler,
+        productHandler *product.Handler,
+) *chi.Mux <span class="cov8" title="1">{
+        router := chi.NewRouter()
+
+        router.Use(middleware.RequestID)
+        router.Use(mwLogger.New(myLogger))
+        router.Use(middleware.Recoverer)
+        router.Use(middleware.URLFormat)
+        router.Use(mwMetrics.MetricsMiddleware)
+
+        router.Post("/register", authHandler.HandlerRegister)
+        router.Post("/login", authHandler.HandlerLogin)
+        router.Post("/dummyLogin", authHandler.HandlerDummyLogin)
+        router.With(
+                mwAuth.CheckAuthMiddleware(jwtService),
+                mwAuth.RoleMiddle(auth.RoleModerator),
+        ).Post("/pvz", pvzHandler.HandlerAddPVZ)
+        router.With(
+                mwAuth.CheckAuthMiddleware(jwtService),
+                mwAuth.RoleMiddle(auth.RoleModerator, auth.RoleEmployee),
+        ).Get("/pvz", pvzHandler.HandlerGetPVZ)
+        router.With(
+                mwAuth.CheckAuthMiddleware(jwtService),
+                mwAuth.RoleMiddle(auth.RoleEmployee),
+        ).Post("/receptions", receptionHandler.HandlerOpenReception)
+        router.With(
+                mwAuth.CheckAuthMiddleware(jwtService),
+                mwAuth.RoleMiddle(auth.RoleEmployee),
+        ).Post("/pvz/{pvzID}/close_last_reception", receptionHandler.HandlerCloseReception)
+        router.With(
+                mwAuth.CheckAuthMiddleware(jwtService),
+                mwAuth.RoleMiddle(auth.RoleEmployee),
+        ).Post("/products", productHandler.HandlerAddProduct)
+        router.With(
+                mwAuth.CheckAuthMiddleware(jwtService),
+                mwAuth.RoleMiddle(auth.RoleEmployee),
+        ).Post("/pvz/{pvzID}/delete_last_product", productHandler.HandlerDeleteProduct)
+
+        return router
+}</span>
+</pre>
+		
+		<pre class="file" id="file27" style="display: none">package postgres
+
+import (
+        "context"
+        "database/sql"
+        "fmt"
+        "time"
+
+        _ "github.com/lib/pq"
+
+        "pvz_service/internal/config"
+)
+
+type Storage struct {
+        DB *sql.DB
+}
+
+func New(cfg *config.DatabaseConfig) (*Storage, error) <span class="cov8" title="1">{
+        connStr := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable",
+                cfg.Username,
+                cfg.Password,
+                cfg.Host,
+                cfg.Port,
+                cfg.Database)
+
+        db, err := sql.Open("postgres", connStr)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, fmt.Errorf("failed to connect to database: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">db.SetMaxOpenConns(cfg.MaxOpenConnections)
+        db.SetMaxIdleConns(cfg.MaxIdleConnections)
+        db.SetConnMaxLifetime(time.Duration(cfg.ConnMaxLifetime) * time.Minute)
+
+        return &amp;Storage{DB: db}, nil</span>
+}
+
+func (s *Storage) Ping(ctx context.Context) error <span class="cov8" title="1">{
+        return s.DB.PingContext(ctx)
+}</span>
+
+func (s *Storage) Close() error <span class="cov8" title="1">{
+        return s.DB.Close()
+}</span>
+</pre>
+		
+		<pre class="file" id="file28" style="display: none">package jwt
+
+import (
+        "fmt"
+        "time"
+
+        jwt "github.com/dgrijalva/jwt-go"
+)
+
+// mockgen -source=pkg/jwt/jwt.go -destination=pkg/jwt/mocks/jwt_mock.go -package=mocks
+
+type JWTService struct {
+        secretKey        string
+        SignedStringFunc func(token *jwt.Token, secretKey string) (string, error)
+}
+
+func NewJWTService(secretKey string) *JWTService <span class="cov8" title="1">{
+        return &amp;JWTService{
+                secretKey: secretKey,
+                SignedStringFunc: func(token *jwt.Token, secretKey string) (string, error) </span><span class="cov8" title="1">{
+                        return token.SignedString([]byte(secretKey))
+                }</span>,
+        }
+}
+
+type TokenService interface {
+        GenerateToken(role string) (*TokenResponse, error)
+        ValidateToken(tokenString string) (map[string]interface{}, error)
+}
+
+type TokenResponse struct {
+        Token string `json:"token"`
+}
+
+func (j *JWTService) GenerateToken(role string) (*TokenResponse, error) <span class="cov8" title="1">{
+        claims := jwt.MapClaims{
+                "role": role,
+                "iat":  time.Now().Unix(),
+                "exp":  time.Now().Add(time.Hour * 1).Unix(),
+        }
+
+        token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+
+        tokenString, err := j.SignedStringFunc(token, j.secretKey)
+        if err != nil </span><span class="cov8" title="1">{
+                return nil, err
+        }</span>
+
+        <span class="cov8" title="1">return &amp;TokenResponse{
+                Token: tokenString,
+        }, nil</span>
+}
+
+func (j *JWTService) ValidateToken(tokenString string) (map[string]interface{}, error) <span class="cov8" title="1">{
+        token, err := jwt.Parse(tokenString, func(_ *jwt.Token) (interface{}, error) </span><span class="cov8" title="1">{
+                return []byte(j.secretKey), nil
+        }</span>)
+        <span class="cov8" title="1">if err != nil || !token.Valid </span><span class="cov8" title="1">{
+                return nil, fmt.Errorf("токен невалидый: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">claims, ok := token.Claims.(jwt.MapClaims)
+        if !ok </span><span class="cov0" title="0">{
+                return nil, fmt.Errorf("не удалось извлечь данные из токена")
+        }</span>
+
+        <span class="cov8" title="1">return claims, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file29" style="display: none">// Code generated by MockGen. DO NOT EDIT.
+// Source: pkg/jwt/jwt.go
+//
+// Generated by this command:
+//
+//        mockgen -source=pkg/jwt/jwt.go -destination=pkg/jwt/mocks/jwt_mock.go -package=mocks
+//
+
+// Package mocks is a generated GoMock package.
+package mocks
+
+import (
+        jwt "pvz_service/pkg/jwt"
+        reflect "reflect"
+
+        gomock "go.uber.org/mock/gomock"
+)
+
+// MockTokenService is a mock of TokenService interface.
+type MockTokenService struct {
+        ctrl     *gomock.Controller
+        recorder *MockTokenServiceMockRecorder
+        isgomock struct{}
+}
+
+// MockTokenServiceMockRecorder is the mock recorder for MockTokenService.
+type MockTokenServiceMockRecorder struct {
+        mock *MockTokenService
+}
+
+// NewMockTokenService creates a new mock instance.
+func NewMockTokenService(ctrl *gomock.Controller) *MockTokenService <span class="cov8" title="1">{
+        mock := &amp;MockTokenService{ctrl: ctrl}
+        mock.recorder = &amp;MockTokenServiceMockRecorder{mock}
+        return mock
+}</span>
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockTokenService) EXPECT() *MockTokenServiceMockRecorder <span class="cov8" title="1">{
+        return m.recorder
+}</span>
+
+// GenerateToken mocks base method.
+func (m *MockTokenService) GenerateToken(role string) (*jwt.TokenResponse, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "GenerateToken", role)
+        ret0, _ := ret[0].(*jwt.TokenResponse)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// GenerateToken indicates an expected call of GenerateToken.
+func (mr *MockTokenServiceMockRecorder) GenerateToken(role any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GenerateToken", reflect.TypeOf((*MockTokenService)(nil).GenerateToken), role)
+}</span>
+
+// ValidateToken mocks base method.
+func (m *MockTokenService) ValidateToken(tokenString string) (map[string]any, error) <span class="cov8" title="1">{
+        m.ctrl.T.Helper()
+        ret := m.ctrl.Call(m, "ValidateToken", tokenString)
+        ret0, _ := ret[0].(map[string]any)
+        ret1, _ := ret[1].(error)
+        return ret0, ret1
+}</span>
+
+// ValidateToken indicates an expected call of ValidateToken.
+func (mr *MockTokenServiceMockRecorder) ValidateToken(tokenString any) *gomock.Call <span class="cov8" title="1">{
+        mr.mock.ctrl.T.Helper()
+        return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ValidateToken", reflect.TypeOf((*MockTokenService)(nil).ValidateToken), tokenString)
+}</span>
+</pre>
+		
+		<pre class="file" id="file30" style="display: none">package metrics
+
+import (
+        "net/http"
+        "time"
+
+        "github.com/prometheus/client_golang/prometheus"
+        "github.com/prometheus/client_golang/prometheus/promauto"
+        "github.com/prometheus/client_golang/prometheus/promhttp"
+)
+
+var (
+        HTTPRequestsTotal = promauto.NewCounterVec(prometheus.CounterOpts{
+                Name: "http_requests_total",
+                Help: "Общее количество HTTP-запросов",
+        }, []string{"method", "path", "status"})
+
+        HTTPResponseTime = promauto.NewHistogramVec(prometheus.HistogramOpts{
+                Name:    "http_response_time_seconds",
+                Help:    "Время выполнения HTTP-запросов в секундах",
+                Buckets: []float64{0.01, 0.05, 0.1, 0.3, 0.5, 1, 3, 5},
+        }, []string{"method", "path"})
+
+        PVZCreated = promauto.NewCounter(prometheus.CounterOpts{
+                Name: "pvz_created_total",
+                Help: "Счётчик количества созданных ПВЗ",
+        })
+
+        ReceptionsCreated = promauto.NewCounter(prometheus.CounterOpts{
+                Name: "receptions_created_total",
+                Help: "Счётчик количества созданных приёмок",
+        })
+
+        ProductsAdded = promauto.NewCounter(prometheus.CounterOpts{
+                Name: "products_added_total",
+                Help: "Счётчик добавленных товаров",
+        })
+)
+
+func Init(port string) <span class="cov0" title="0">{
+        http.Handle("/metrics", promhttp.Handler())
+        go func() </span><span class="cov0" title="0">{
+                _ = http.ListenAndServe(port, nil)
+        }</span>()
+}
+
+func RecordHTTPRequest(method, path string, status int, duration time.Duration) <span class="cov8" title="1">{
+        HTTPRequestsTotal.WithLabelValues(method, path, http.StatusText(status)).Inc()
+        HTTPResponseTime.WithLabelValues(method, path).Observe(duration.Seconds())
+}</span>
+</pre>
+		
+		<pre class="file" id="file31" style="display: none">package auth
+
+import (
+        "context"
+        "log"
+        "net/http"
+        "strings"
+
+        "pvz_service/pkg/jwt"
+        "pvz_service/pkg/response"
+)
+
+func CheckAuthMiddleware(jwtService jwt.TokenService) func(http.Handler) http.Handler <span class="cov8" title="1">{
+        return func(next http.Handler) http.Handler </span><span class="cov8" title="1">{
+                return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) </span><span class="cov8" title="1">{
+
+                        tokenString := r.Header.Get("Authorization")
+
+                        if tokenString == "" </span><span class="cov8" title="1">{
+                                log.Printf("Отсутствует токен авторизации")
+                                response.MyResponseError(w, http.StatusForbidden, "Доступ запрещен")
+                                return
+                        }</span>
+
+                        <span class="cov8" title="1">tokenString = strings.TrimPrefix(tokenString, "Bearer ")
+
+                        claims, err := jwtService.ValidateToken(tokenString)
+                        if err != nil </span><span class="cov8" title="1">{
+                                log.Printf("Некорректный token: %v", err)
+                                response.MyResponseError(w, http.StatusForbidden, "Доступ запрещен")
+                                return
+                        }</span>
+
+                        <span class="cov8" title="1">role, ok := claims["role"].(string)
+                        if !ok </span><span class="cov8" title="1">{
+                                log.Printf("Неверная роль: %s", role)
+                                response.MyResponseError(w, http.StatusForbidden, "Доступ запрещен")
+                                return
+                        }</span>
+
+                        <span class="cov8" title="1">ctx := context.WithValue(r.Context(), "role", role)
+
+                        next.ServeHTTP(w, r.WithContext(ctx))</span>
+                })
+        }
+}
+
+func RoleMiddle(requiredRoles ...string) func(http.Handler) http.Handler <span class="cov8" title="1">{
+        return func(next http.Handler) http.Handler </span><span class="cov8" title="1">{
+                return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) </span><span class="cov8" title="1">{
+                        roleValue := r.Context().Value("role")
+                        role, ok := roleValue.(string)
+                        if !ok </span><span class="cov8" title="1">{
+                                response.MyResponseError(w, http.StatusForbidden, "Доступ запрещен")
+                                return
+                        }</span>
+
+                        <span class="cov8" title="1">for _, requiredRole := range requiredRoles </span><span class="cov8" title="1">{
+                                if role == requiredRole </span><span class="cov8" title="1">{
+                                        next.ServeHTTP(w, r)
+                                        return
+                                }</span>
+                        }
+
+                        <span class="cov8" title="1">response.MyResponseError(w, http.StatusForbidden, "Доступ запрещен")</span>
+                })
+        }
+}
+</pre>
+		
+		<pre class="file" id="file32" style="display: none">package metrics
+
+import (
+        "net/http"
+        "time"
+
+        "pvz_service/pkg/metrics"
+)
+
+func MetricsMiddleware(next http.Handler) http.Handler <span class="cov8" title="1">{
+        return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) </span><span class="cov8" title="1">{
+                start := time.Now()
+                rw := &amp;responseWriter{w, http.StatusOK}
+
+                next.ServeHTTP(rw, r)
+
+                duration := time.Since(start)
+                metrics.RecordHTTPRequest(r.Method, r.URL.Path, rw.status, duration)
+        }</span>)
+}
+
+type responseWriter struct {
+        http.ResponseWriter
+        status int
+}
+
+func (rw *responseWriter) WriteHeader(code int) <span class="cov8" title="1">{
+        rw.status = code
+        rw.ResponseWriter.WriteHeader(code)
+}</span>
+</pre>
+		
+		<pre class="file" id="file33" style="display: none">package mwLogger
+
+import (
+        "log/slog"
+        "net/http"
+        "time"
+
+        "github.com/go-chi/chi/v5/middleware"
+)
+
+func New(log *slog.Logger) func(next http.Handler) http.Handler <span class="cov8" title="1">{
+        return func(next http.Handler) http.Handler </span><span class="cov8" title="1">{
+                log = log.With(
+                        slog.String("component", "middleware/mwLogger"),
+                )
+
+                log.Info("mwLogger middleware включен")
+
+                fn := func(w http.ResponseWriter, r *http.Request) </span><span class="cov8" title="1">{
+                        entry := log.With(
+                                slog.String("method", r.Method),
+                                slog.String("path", r.URL.Path),
+                                slog.String("remote_addr", r.RemoteAddr),
+                                slog.String("user_agent", r.UserAgent()),
+                                slog.String("request_id", middleware.GetReqID(r.Context())),
+                        )
+
+                        ww := middleware.NewWrapResponseWriter(w, r.ProtoMajor)
+
+                        t1 := time.Now()
+                        defer func() </span><span class="cov8" title="1">{
+                                entry.Info("request completed",
+                                        slog.Int("status", ww.Status()),
+                                        slog.Int("size", ww.BytesWritten()),
+                                        slog.String("duration", time.Since(t1).String()),
+                                )
+                        }</span>()
+
+                        <span class="cov8" title="1">next.ServeHTTP(ww, r)</span>
+                }
+
+                <span class="cov8" title="1">return http.HandlerFunc(fn)</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file34" style="display: none">package response
+
+import (
+        "encoding/json"
+        "net/http"
+)
+
+type ErrorResponse struct {
+        Errors string `json:"message"`
+}
+
+func MyResponseError(w http.ResponseWriter, status int, message string) <span class="cov8" title="1">{
+        w.Header().Set("Content-Type", "application/json")
+        w.WriteHeader(status)
+        err := json.NewEncoder(w).Encode(ErrorResponse{
+                Errors: message,
+        })
+        if err != nil </span><span class="cov0" title="0">{
+                http.Error(w, "Ошибка шифрования", http.StatusInternalServerError)
+                return
+        }</span>
+}
+
+func MyResponseJSON(w http.ResponseWriter, status int, v interface{}) <span class="cov8" title="1">{
+        w.Header().Set("Content-Type", "application/json")
+        w.WriteHeader(status)
+        err := json.NewEncoder(w).Encode(v)
+        if err != nil </span><span class="cov0" title="0">{
+                http.Error(w, "Ошибка шифрования", http.StatusInternalServerError)
+        }</span>
+}
+</pre>
+		
+		<pre class="file" id="file35" style="display: none">// Code generated by protoc-gen-go. DO NOT EDIT.
+// versions:
+//         protoc-gen-go v1.28.1
+//         protoc        v5.29.3
+// source: pvz.proto
+
+package pvz_v1
+
+import (
+        protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+        protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+        timestamppb "google.golang.org/protobuf/types/known/timestamppb"
+        reflect "reflect"
+        sync "sync"
+)
+
+const (
+        // Verify that this generated code is sufficiently up-to-date.
+        _ = protoimpl.EnforceVersion(20 - protoimpl.MinVersion)
+        // Verify that runtime/protoimpl is sufficiently up-to-date.
+        _ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
+)
+
+type ReceptionStatus int32
+
+const (
+        ReceptionStatus_RECEPTION_STATUS_IN_PROGRESS ReceptionStatus = 0
+        ReceptionStatus_RECEPTION_STATUS_CLOSED      ReceptionStatus = 1
+)
+
+// Enum value maps for ReceptionStatus.
+var (
+        ReceptionStatus_name = map[int32]string{
+                0: "RECEPTION_STATUS_IN_PROGRESS",
+                1: "RECEPTION_STATUS_CLOSED",
+        }
+        ReceptionStatus_value = map[string]int32{
+                "RECEPTION_STATUS_IN_PROGRESS": 0,
+                "RECEPTION_STATUS_CLOSED":      1,
+        }
+)
+
+func (x ReceptionStatus) Enum() *ReceptionStatus <span class="cov0" title="0">{
+        p := new(ReceptionStatus)
+        *p = x
+        return p
+}</span>
+
+func (x ReceptionStatus) String() string <span class="cov0" title="0">{
+        return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}</span>
+
+func (ReceptionStatus) Descriptor() protoreflect.EnumDescriptor <span class="cov0" title="0">{
+        return file_pvz_proto_enumTypes[0].Descriptor()
+}</span>
+
+func (ReceptionStatus) Type() protoreflect.EnumType <span class="cov0" title="0">{
+        return &amp;file_pvz_proto_enumTypes[0]
+}</span>
+
+func (x ReceptionStatus) Number() protoreflect.EnumNumber <span class="cov0" title="0">{
+        return protoreflect.EnumNumber(x)
+}</span>
+
+// Deprecated: Use ReceptionStatus.Descriptor instead.
+func (ReceptionStatus) EnumDescriptor() ([]byte, []int) <span class="cov0" title="0">{
+        return file_pvz_proto_rawDescGZIP(), []int{0}
+}</span>
+
+type PVZ struct {
+        state         protoimpl.MessageState
+        sizeCache     protoimpl.SizeCache
+        unknownFields protoimpl.UnknownFields
+
+        Id               string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+        RegistrationDate *timestamppb.Timestamp `protobuf:"bytes,2,opt,name=registration_date,json=registrationDate,proto3" json:"registration_date,omitempty"`
+        City             string                 `protobuf:"bytes,3,opt,name=city,proto3" json:"city,omitempty"`
+}
+
+func (x *PVZ) Reset() <span class="cov0" title="0">{
+        *x = PVZ{}
+        if protoimpl.UnsafeEnabled </span><span class="cov0" title="0">{
+                mi := &amp;file_pvz_proto_msgTypes[0]
+                ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+                ms.StoreMessageInfo(mi)
+        }</span>
+}
+
+func (x *PVZ) String() string <span class="cov0" title="0">{
+        return protoimpl.X.MessageStringOf(x)
+}</span>
+
+func (*PVZ) ProtoMessage() {<span class="cov0" title="0">}</span>
+
+func (x *PVZ) ProtoReflect() protoreflect.Message <span class="cov0" title="0">{
+        mi := &amp;file_pvz_proto_msgTypes[0]
+        if protoimpl.UnsafeEnabled &amp;&amp; x != nil </span><span class="cov0" title="0">{
+                ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+                if ms.LoadMessageInfo() == nil </span><span class="cov0" title="0">{
+                        ms.StoreMessageInfo(mi)
+                }</span>
+                <span class="cov0" title="0">return ms</span>
+        }
+        <span class="cov0" title="0">return mi.MessageOf(x)</span>
+}
+
+// Deprecated: Use PVZ.ProtoReflect.Descriptor instead.
+func (*PVZ) Descriptor() ([]byte, []int) <span class="cov0" title="0">{
+        return file_pvz_proto_rawDescGZIP(), []int{0}
+}</span>
+
+func (x *PVZ) GetId() string <span class="cov0" title="0">{
+        if x != nil </span><span class="cov0" title="0">{
+                return x.Id
+        }</span>
+        <span class="cov0" title="0">return ""</span>
+}
+
+func (x *PVZ) GetRegistrationDate() *timestamppb.Timestamp <span class="cov0" title="0">{
+        if x != nil </span><span class="cov0" title="0">{
+                return x.RegistrationDate
+        }</span>
+        <span class="cov0" title="0">return nil</span>
+}
+
+func (x *PVZ) GetCity() string <span class="cov0" title="0">{
+        if x != nil </span><span class="cov0" title="0">{
+                return x.City
+        }</span>
+        <span class="cov0" title="0">return ""</span>
+}
+
+type GetPVZListRequest struct {
+        state         protoimpl.MessageState
+        sizeCache     protoimpl.SizeCache
+        unknownFields protoimpl.UnknownFields
+}
+
+func (x *GetPVZListRequest) Reset() <span class="cov0" title="0">{
+        *x = GetPVZListRequest{}
+        if protoimpl.UnsafeEnabled </span><span class="cov0" title="0">{
+                mi := &amp;file_pvz_proto_msgTypes[1]
+                ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+                ms.StoreMessageInfo(mi)
+        }</span>
+}
+
+func (x *GetPVZListRequest) String() string <span class="cov0" title="0">{
+        return protoimpl.X.MessageStringOf(x)
+}</span>
+
+func (*GetPVZListRequest) ProtoMessage() {<span class="cov0" title="0">}</span>
+
+func (x *GetPVZListRequest) ProtoReflect() protoreflect.Message <span class="cov0" title="0">{
+        mi := &amp;file_pvz_proto_msgTypes[1]
+        if protoimpl.UnsafeEnabled &amp;&amp; x != nil </span><span class="cov0" title="0">{
+                ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+                if ms.LoadMessageInfo() == nil </span><span class="cov0" title="0">{
+                        ms.StoreMessageInfo(mi)
+                }</span>
+                <span class="cov0" title="0">return ms</span>
+        }
+        <span class="cov0" title="0">return mi.MessageOf(x)</span>
+}
+
+// Deprecated: Use GetPVZListRequest.ProtoReflect.Descriptor instead.
+func (*GetPVZListRequest) Descriptor() ([]byte, []int) <span class="cov0" title="0">{
+        return file_pvz_proto_rawDescGZIP(), []int{1}
+}</span>
+
+type GetPVZListResponse struct {
+        state         protoimpl.MessageState
+        sizeCache     protoimpl.SizeCache
+        unknownFields protoimpl.UnknownFields
+
+        Pvzs []*PVZ `protobuf:"bytes,1,rep,name=pvzs,proto3" json:"pvzs,omitempty"`
+}
+
+func (x *GetPVZListResponse) Reset() <span class="cov0" title="0">{
+        *x = GetPVZListResponse{}
+        if protoimpl.UnsafeEnabled </span><span class="cov0" title="0">{
+                mi := &amp;file_pvz_proto_msgTypes[2]
+                ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+                ms.StoreMessageInfo(mi)
+        }</span>
+}
+
+func (x *GetPVZListResponse) String() string <span class="cov0" title="0">{
+        return protoimpl.X.MessageStringOf(x)
+}</span>
+
+func (*GetPVZListResponse) ProtoMessage() {<span class="cov0" title="0">}</span>
+
+func (x *GetPVZListResponse) ProtoReflect() protoreflect.Message <span class="cov0" title="0">{
+        mi := &amp;file_pvz_proto_msgTypes[2]
+        if protoimpl.UnsafeEnabled &amp;&amp; x != nil </span><span class="cov0" title="0">{
+                ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+                if ms.LoadMessageInfo() == nil </span><span class="cov0" title="0">{
+                        ms.StoreMessageInfo(mi)
+                }</span>
+                <span class="cov0" title="0">return ms</span>
+        }
+        <span class="cov0" title="0">return mi.MessageOf(x)</span>
+}
+
+// Deprecated: Use GetPVZListResponse.ProtoReflect.Descriptor instead.
+func (*GetPVZListResponse) Descriptor() ([]byte, []int) <span class="cov0" title="0">{
+        return file_pvz_proto_rawDescGZIP(), []int{2}
+}</span>
+
+func (x *GetPVZListResponse) GetPvzs() []*PVZ <span class="cov0" title="0">{
+        if x != nil </span><span class="cov0" title="0">{
+                return x.Pvzs
+        }</span>
+        <span class="cov0" title="0">return nil</span>
+}
+
+var File_pvz_proto protoreflect.FileDescriptor
+
+var file_pvz_proto_rawDesc = []byte{
+        0x0a, 0x09, 0x70, 0x76, 0x7a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x06, 0x70, 0x76, 0x7a,
+        0x2e, 0x76, 0x31, 0x1a, 0x1f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74,
+        0x6f, 0x62, 0x75, 0x66, 0x2f, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x2e, 0x70,
+        0x72, 0x6f, 0x74, 0x6f, 0x22, 0x72, 0x0a, 0x03, 0x50, 0x56, 0x5a, 0x12, 0x0e, 0x0a, 0x02, 0x69,
+        0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x69, 0x64, 0x12, 0x47, 0x0a, 0x11, 0x72,
+        0x65, 0x67, 0x69, 0x73, 0x74, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x64, 0x61, 0x74, 0x65,
+        0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e,
+        0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61,
+        0x6d, 0x70, 0x52, 0x10, 0x72, 0x65, 0x67, 0x69, 0x73, 0x74, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e,
+        0x44, 0x61, 0x74, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x69, 0x74, 0x79, 0x18, 0x03, 0x20, 0x01,
+        0x28, 0x09, 0x52, 0x04, 0x63, 0x69, 0x74, 0x79, 0x22, 0x13, 0x0a, 0x11, 0x47, 0x65, 0x74, 0x50,
+        0x56, 0x5a, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x35, 0x0a,
+        0x12, 0x47, 0x65, 0x74, 0x50, 0x56, 0x5a, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f,
+        0x6e, 0x73, 0x65, 0x12, 0x1f, 0x0a, 0x04, 0x70, 0x76, 0x7a, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28,
+        0x0b, 0x32, 0x0b, 0x2e, 0x70, 0x76, 0x7a, 0x2e, 0x76, 0x31, 0x2e, 0x50, 0x56, 0x5a, 0x52, 0x04,
+        0x70, 0x76, 0x7a, 0x73, 0x2a, 0x50, 0x0a, 0x0f, 0x52, 0x65, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6f,
+        0x6e, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x20, 0x0a, 0x1c, 0x52, 0x45, 0x43, 0x45, 0x50,
+        0x54, 0x49, 0x4f, 0x4e, 0x5f, 0x53, 0x54, 0x41, 0x54, 0x55, 0x53, 0x5f, 0x49, 0x4e, 0x5f, 0x50,
+        0x52, 0x4f, 0x47, 0x52, 0x45, 0x53, 0x53, 0x10, 0x00, 0x12, 0x1b, 0x0a, 0x17, 0x52, 0x45, 0x43,
+        0x45, 0x50, 0x54, 0x49, 0x4f, 0x4e, 0x5f, 0x53, 0x54, 0x41, 0x54, 0x55, 0x53, 0x5f, 0x43, 0x4c,
+        0x4f, 0x53, 0x45, 0x44, 0x10, 0x01, 0x32, 0x51, 0x0a, 0x0a, 0x50, 0x56, 0x5a, 0x53, 0x65, 0x72,
+        0x76, 0x69, 0x63, 0x65, 0x12, 0x43, 0x0a, 0x0a, 0x47, 0x65, 0x74, 0x50, 0x56, 0x5a, 0x4c, 0x69,
+        0x73, 0x74, 0x12, 0x19, 0x2e, 0x70, 0x76, 0x7a, 0x2e, 0x76, 0x31, 0x2e, 0x47, 0x65, 0x74, 0x50,
+        0x56, 0x5a, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1a, 0x2e,
+        0x70, 0x76, 0x7a, 0x2e, 0x76, 0x31, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x56, 0x5a, 0x4c, 0x69, 0x73,
+        0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x21, 0x5a, 0x1f, 0x70, 0x76, 0x7a,
+        0x5f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x67,
+        0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x3b, 0x70, 0x76, 0x7a, 0x5f, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72,
+        0x6f, 0x74, 0x6f, 0x33,
+}
+
+var (
+        file_pvz_proto_rawDescOnce sync.Once
+        file_pvz_proto_rawDescData = file_pvz_proto_rawDesc
+)
+
+func file_pvz_proto_rawDescGZIP() []byte <span class="cov0" title="0">{
+        file_pvz_proto_rawDescOnce.Do(func() </span><span class="cov0" title="0">{
+                file_pvz_proto_rawDescData = protoimpl.X.CompressGZIP(file_pvz_proto_rawDescData)
+        }</span>)
+        <span class="cov0" title="0">return file_pvz_proto_rawDescData</span>
+}
+
+var file_pvz_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_pvz_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_pvz_proto_goTypes = []interface{}{
+        (ReceptionStatus)(0),          // 0: pvz.v1.ReceptionStatus
+        (*PVZ)(nil),                   // 1: pvz.v1.PVZ
+        (*GetPVZListRequest)(nil),     // 2: pvz.v1.GetPVZListRequest
+        (*GetPVZListResponse)(nil),    // 3: pvz.v1.GetPVZListResponse
+        (*timestamppb.Timestamp)(nil), // 4: google.protobuf.Timestamp
+}
+var file_pvz_proto_depIdxs = []int32{
+        4, // 0: pvz.v1.PVZ.registration_date:type_name -&gt; google.protobuf.Timestamp
+        1, // 1: pvz.v1.GetPVZListResponse.pvzs:type_name -&gt; pvz.v1.PVZ
+        2, // 2: pvz.v1.PVZService.GetPVZList:input_type -&gt; pvz.v1.GetPVZListRequest
+        3, // 3: pvz.v1.PVZService.GetPVZList:output_type -&gt; pvz.v1.GetPVZListResponse
+        3, // [3:4] is the sub-list for method output_type
+        2, // [2:3] is the sub-list for method input_type
+        2, // [2:2] is the sub-list for extension type_name
+        2, // [2:2] is the sub-list for extension extendee
+        0, // [0:2] is the sub-list for field type_name
+}
+
+func init() <span class="cov0" title="0">{ file_pvz_proto_init() }</span>
+func file_pvz_proto_init() <span class="cov0" title="0">{
+        if File_pvz_proto != nil </span><span class="cov0" title="0">{
+                return
+        }</span>
+        <span class="cov0" title="0">if !protoimpl.UnsafeEnabled </span><span class="cov0" title="0">{
+                file_pvz_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} </span><span class="cov0" title="0">{
+                        switch v := v.(*PVZ); i </span>{
+                        case 0:<span class="cov0" title="0">
+                                return &amp;v.state</span>
+                        case 1:<span class="cov0" title="0">
+                                return &amp;v.sizeCache</span>
+                        case 2:<span class="cov0" title="0">
+                                return &amp;v.unknownFields</span>
+                        default:<span class="cov0" title="0">
+                                return nil</span>
+                        }
+                }
+                <span class="cov0" title="0">file_pvz_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} </span><span class="cov0" title="0">{
+                        switch v := v.(*GetPVZListRequest); i </span>{
+                        case 0:<span class="cov0" title="0">
+                                return &amp;v.state</span>
+                        case 1:<span class="cov0" title="0">
+                                return &amp;v.sizeCache</span>
+                        case 2:<span class="cov0" title="0">
+                                return &amp;v.unknownFields</span>
+                        default:<span class="cov0" title="0">
+                                return nil</span>
+                        }
+                }
+                <span class="cov0" title="0">file_pvz_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} </span><span class="cov0" title="0">{
+                        switch v := v.(*GetPVZListResponse); i </span>{
+                        case 0:<span class="cov0" title="0">
+                                return &amp;v.state</span>
+                        case 1:<span class="cov0" title="0">
+                                return &amp;v.sizeCache</span>
+                        case 2:<span class="cov0" title="0">
+                                return &amp;v.unknownFields</span>
+                        default:<span class="cov0" title="0">
+                                return nil</span>
+                        }
+                }
+        }
+        <span class="cov0" title="0">type x struct{}
+        out := protoimpl.TypeBuilder{
+                File: protoimpl.DescBuilder{
+                        GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
+                        RawDescriptor: file_pvz_proto_rawDesc,
+                        NumEnums:      1,
+                        NumMessages:   3,
+                        NumExtensions: 0,
+                        NumServices:   1,
+                },
+                GoTypes:           file_pvz_proto_goTypes,
+                DependencyIndexes: file_pvz_proto_depIdxs,
+                EnumInfos:         file_pvz_proto_enumTypes,
+                MessageInfos:      file_pvz_proto_msgTypes,
+        }.Build()
+        File_pvz_proto = out.File
+        file_pvz_proto_rawDesc = nil
+        file_pvz_proto_goTypes = nil
+        file_pvz_proto_depIdxs = nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file36" style="display: none">// Code generated by protoc-gen-go-grpc. DO NOT EDIT.
+// versions:
+// - protoc-gen-go-grpc v1.2.0
+// - protoc             v5.29.3
+// source: pvz.proto
+
+package pvz_v1
+
+import (
+        context "context"
+        grpc "google.golang.org/grpc"
+        codes "google.golang.org/grpc/codes"
+        status "google.golang.org/grpc/status"
+)
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+// Requires gRPC-Go v1.32.0 or later.
+const _ = grpc.SupportPackageIsVersion7
+
+// PVZServiceClient is the client API for PVZService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
+type PVZServiceClient interface {
+        GetPVZList(ctx context.Context, in *GetPVZListRequest, opts ...grpc.CallOption) (*GetPVZListResponse, error)
+}
+
+type pVZServiceClient struct {
+        cc grpc.ClientConnInterface
+}
+
+func NewPVZServiceClient(cc grpc.ClientConnInterface) PVZServiceClient <span class="cov0" title="0">{
+        return &amp;pVZServiceClient{cc}
+}</span>
+
+func (c *pVZServiceClient) GetPVZList(ctx context.Context, in *GetPVZListRequest, opts ...grpc.CallOption) (*GetPVZListResponse, error) <span class="cov0" title="0">{
+        out := new(GetPVZListResponse)
+        err := c.cc.Invoke(ctx, "/pvz.v1.PVZService/GetPVZList", in, out, opts...)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+        <span class="cov0" title="0">return out, nil</span>
+}
+
+// PVZServiceServer is the server API for PVZService service.
+// All implementations must embed UnimplementedPVZServiceServer
+// for forward compatibility
+type PVZServiceServer interface {
+        GetPVZList(context.Context, *GetPVZListRequest) (*GetPVZListResponse, error)
+        mustEmbedUnimplementedPVZServiceServer()
+}
+
+// UnimplementedPVZServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedPVZServiceServer struct {
+}
+
+func (UnimplementedPVZServiceServer) GetPVZList(context.Context, *GetPVZListRequest) (*GetPVZListResponse, error) <span class="cov0" title="0">{
+        return nil, status.Errorf(codes.Unimplemented, "method GetPVZList not implemented")
+}</span>
+func (UnimplementedPVZServiceServer) mustEmbedUnimplementedPVZServiceServer() {<span class="cov0" title="0">}</span>
+
+// UnsafePVZServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to PVZServiceServer will
+// result in compilation errors.
+type UnsafePVZServiceServer interface {
+        mustEmbedUnimplementedPVZServiceServer()
+}
+
+func RegisterPVZServiceServer(s grpc.ServiceRegistrar, srv PVZServiceServer) <span class="cov0" title="0">{
+        s.RegisterService(&amp;PVZService_ServiceDesc, srv)
+}</span>
+
+func _PVZService_GetPVZList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) <span class="cov0" title="0">{
+        in := new(GetPVZListRequest)
+        if err := dec(in); err != nil </span><span class="cov0" title="0">{
+                return nil, err
+        }</span>
+        <span class="cov0" title="0">if interceptor == nil </span><span class="cov0" title="0">{
+                return srv.(PVZServiceServer).GetPVZList(ctx, in)
+        }</span>
+        <span class="cov0" title="0">info := &amp;grpc.UnaryServerInfo{
+                Server:     srv,
+                FullMethod: "/pvz.v1.PVZService/GetPVZList",
+        }
+        handler := func(ctx context.Context, req interface{}) (interface{}, error) </span><span class="cov0" title="0">{
+                return srv.(PVZServiceServer).GetPVZList(ctx, req.(*GetPVZListRequest))
+        }</span>
+        <span class="cov0" title="0">return interceptor(ctx, in, info, handler)</span>
+}
+
+// PVZService_ServiceDesc is the grpc.ServiceDesc for PVZService service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var PVZService_ServiceDesc = grpc.ServiceDesc{
+        ServiceName: "pvz.v1.PVZService",
+        HandlerType: (*PVZServiceServer)(nil),
+        Methods: []grpc.MethodDesc{
+                {
+                        MethodName: "GetPVZList",
+                        Handler:    _PVZService_GetPVZList_Handler,
+                },
+        },
+        Streams:  []grpc.StreamDesc{},
+        Metadata: "pvz.proto",
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>

@@ -1,0 +1,61 @@
+services:
+  db:
+    image: postgres:16
+    container_name: pvz_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "0512"
+      POSTGRES_DB: pvz_service
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./migrations/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5433:5432"
+    restart: unless-stopped
+
+  pvz_http:
+    build:
+      context: .
+      dockerfile: Dockerfile.http
+    container_name: pvz_http
+    ports:
+      - "8080:8080"
+#      - "9000:9090"
+    depends_on:
+      - db
+    environment:
+      CONFIG_PATH: /config/config.yaml
+    volumes:
+      - ./config:/config
+    restart: unless-stopped
+
+  pvz_grpc:
+    build:
+      context: .
+      dockerfile: Dockerfile.grpc
+    container_name: pvz_grpc
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      CONFIG_PATH: /config/config.yaml
+    volumes:
+      - ./config:/config
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9000:9090"
+    environment:
+      CONFIG_PATH: /config/config.yaml
+    volumes:
+      - ./config/prometheus.yaml:/etc/prometheus/prometheus.yaml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yaml'
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
