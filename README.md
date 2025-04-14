@@ -33,6 +33,7 @@ docker-compose up --build
 - API:        http://localhost:8080
 - gRPC:       http://localhost:3000
 - Prometheus: http://localhost:9000
+- PostgreSQL: http://localhost:5433
 
 
 ## API
