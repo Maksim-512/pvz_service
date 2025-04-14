@@ -18,7 +18,7 @@
 ### Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/Maksim-512/pvz-service.git
+git clone https://github.com/Maksim-512/pvz_service.git
 cd pvz-service
 ```
 
