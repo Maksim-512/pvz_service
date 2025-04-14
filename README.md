@@ -19,7 +19,7 @@
 
 ```bash
 git clone https://github.com/Maksim-512/pvz_service.git
-cd pvz-service
+cd pvz_service
 ```
 
 ### Сборка и запуск с использованием Docker:
