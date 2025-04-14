@@ -16,7 +16,6 @@ import (
 	"pvz_service/internal/server"
 	"pvz_service/internal/storage/postgres"
 	"pvz_service/pkg/jwt"
-	"pvz_service/pkg/metrics"
 )
 
 func main() {
@@ -29,8 +28,8 @@ func main() {
 
 	myLogger := logger.SetupLogger(cfg.Logging.Env)
 
-	promPort := fmt.Sprintf(":%s", cfg.Prometheus.Port)
-	metrics.Init(promPort)
+	//promPort := fmt.Sprintf(":%s", cfg.Prometheus.Port)
+	//metrics.Init(promPort)
 
 	myLogger.Info("Конфигурация логера подгружена")
 

@@ -43,11 +43,25 @@ services:
       - ./config:/config
     restart: unless-stopped
 
+  metrics:
+    build:
+      context: .
+      dockerfile: Dockerfile.http
+    container_name: pvz_metrics
+    ports:
+      - "9000:9000"
+    environment:
+      CONFIG_PATH: /config/config.yaml
+    volumes:
+      - ./config:/config
+    command: ["go", "run", "./cmd/pvz_service/metrics/main.go"]
+    restart: unless-stopped
+
   prometheus:
     image: prom/prometheus
     container_name: prometheus
     ports:
-      - "9000:9090"
+      - "9090:9090"
     environment:
       CONFIG_PATH: /config/config.yaml
     volumes:

@@ -6,7 +6,6 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 var (
@@ -36,13 +35,6 @@ var (
 		Help: "Счётчик добавленных товаров",
 	})
 )
-
-func Init(port string) {
-	http.Handle("/metrics", promhttp.Handler())
-	go func() {
-		_ = http.ListenAndServe(port, nil)
-	}()
-}
 
 func RecordHTTPRequest(method, path string, status int, duration time.Duration) {
 	HTTPRequestsTotal.WithLabelValues(method, path, http.StatusText(status)).Inc()
